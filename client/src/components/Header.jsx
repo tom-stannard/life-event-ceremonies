@@ -56,7 +56,10 @@ export default function Header() {
     <header className={`site-header${open ? ' is-open' : ''}`}>
       <div className="header-bar">
         <Link to="/" className="header-logo" aria-label="Life Event Ceremonies, home">
-          <img src="/brand/logo-horizontal.svg" alt="" width="560" height="100" />
+          <picture>
+            <source media="(max-width: 959px)" srcSet="/brand/logo-compact.svg" />
+            <img src="/brand/logo-horizontal.svg" alt="" width="560" height="100" />
+          </picture>
         </Link>
         <button
           type="button"

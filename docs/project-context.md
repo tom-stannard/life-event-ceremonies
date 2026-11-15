@@ -64,6 +64,11 @@ The full site was built on branch `site-build`: all pages above, the new logo, t
 - **Contact details** (the table above).
 - **Contact form** capturing first name, last name, email, contact number, the service being enquired about (wedding / vow renewal / baby naming / funeral / other), and a free-text message (what, when, where).
 
+### Branches (2026-11-16)
+
+- `main`: what gets published. Bug fixes go straight here.
+- `staging`: design uplifts from the 2026-11-16 design review, for the owner to try before merging into `main`: hero entrance animation, trust line, "Moments from real ceremonies" photo strip, featured quote, signature, plain suburb links, contact photo, tap-to-enlarge galleries, real funeral photo, gentler funeral form wording, Notice of Intended Marriage link, simpler area pages, FAQ closing prompt, Google reviews button, phone action bar (Call and Enquire), no past dates in the form, and a compact header logo on phones.
+
 ## Hosting and deployment
 
 - Hosted on a **GoDaddy Economy** plan (cPanel), running as a cPanel **Node.js app** that tracks the `main` branch of `github.com/tom-stannard/life-event-ceremonies`.

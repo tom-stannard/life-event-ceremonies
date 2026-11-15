@@ -14,6 +14,14 @@ Copy written on 2026-11-15 that goes beyond what Michelle has told us directly. 
 - **Meeting before booking** (FAQ, How it works): the site says "let's have a chat", with no pressure. Is the first chat free? In person, by phone, or by video?
 - **Ceremony draft**: How it works says "I'll write your ceremony and we'll shape it together". Does she send a draft for review?
 
+## Added with the design uplifts (2026-11-16, `staging` branch)
+
+- **Home hero trust line:** "Rated 5 stars on Google." (true of all 16 Google reviews on 2026-11-15) with a link to all the kind words. Update it if a review below 5 stars ever comes in.
+- **Contact section:** "You'll be talking to me, Michelle." beside her headshot.
+- **FAQ page close:** "There's no such thing as a silly question. Send me yours and I'll get back to you."
+- **Weddings:** links to the official Notice of Intended Marriage form on ag.gov.au.
+- **Signature:** "Michelle x" under the About text, set in a handwritten script (an image, not her real signature).
+
 ## Practical details
 
 - **Travel**: the site says she covers Camden, Campbelltown, Wollondilly and South West Sydney, and to "get in touch" for further away. Are there travel fees, or a boundary?
@@ -45,4 +53,3 @@ Copy written on 2026-11-15 that goes beyond what Michelle has told us directly. 
 - **Acknowledgement of Country** in the footer (Dharawal and Gundungurra Country covers much of Macarthur and Wollondilly). Only if Michelle would like one.
 - **Google reviews link**: replace the search link in `client/src/siteConfig.js` (`googleReviews`) with the direct link from her Google Business Profile ("Ask for reviews" or "Read reviews").
 - **Personal details for the About section**: a few real, specific things about Michelle (family, what she loves, why she became a celebrant) would make the home page feel much more like her. The reference site marrymenicky.com.au does this well.
-- **Notice of Intended Marriage**: `local assets/Documents/notice-of-intended-marriage.DOCX` exists. The official form is available from the Attorney-General's Department website. The site could link to it from the Weddings page or FAQs. Confirm she'd like that.

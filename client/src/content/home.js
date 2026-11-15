@@ -14,6 +14,26 @@ export const home = {
       'Choosing a celebrant comes down to feeling comfortable with them, so let’s have a chat. I really hope I can be that person for you.',
     ],
   },
+  // Trust line under the hero buttons. All of Michelle's Google reviews are 5 stars (docs/testimonials.md).
+  trust: 'Rated 5 stars on Google.',
+  // The swipeable strip of Michelle's own ceremony photos.
+  moments: {
+    heading: 'Moments from real ceremonies',
+    photos: [
+      'wedding-forest-kiss',
+      'naming-balloons',
+      'wedding-lookout',
+      'wedding-laughter',
+      'vow-renewal',
+      'wedding-barn',
+      'naming-group',
+      'wedding-lawn-signing',
+      'wedding-walk',
+      'wedding-certificate',
+      'wedding-bush-garden',
+      'wedding-autumn',
+    ],
+  },
   steps: [
     { heading: 'Get in touch', text: 'Send me an enquiry or give me a call and tell me a little about what you’re planning.' },
     { heading: 'Let’s have a chat', text: 'We’ll talk about your ideas, your story and what matters most to you, with no pressure at all.' },

@@ -834,28 +834,6 @@ main {
   }
 }
 
-.area-links {
-  list-style: none;
-  margin: 1rem 0 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-
-.area-links a {
-  display: inline-block;
-  padding: 0.55rem 1.1rem;
-  border: 1.5px solid var(--sage);
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.area-links a:hover {
-  background: var(--sage-soft);
-}
-
 .area-groups {
   display: grid;
   gap: 1.75rem;
@@ -1378,6 +1356,393 @@ main {
 
 .not-found {
   padding-bottom: var(--section-space);
+}
+
+/* ---------------------------------------------------------------- uplifts (staging) */
+
+/* Hero entrance: once on load, the text rises in and the arch outline draws. */
+.hero-enter .hero-text > * {
+  animation: rise-in 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.hero-enter .hero-text > :nth-child(2) {
+  animation-delay: 90ms;
+}
+
+.hero-enter .hero-text > :nth-child(3) {
+  animation-delay: 180ms;
+}
+
+.hero-enter .hero-text > :nth-child(n + 4) {
+  animation-delay: 270ms;
+}
+
+.hero-enter .hero-photo img {
+  animation: photo-in 900ms 120ms ease-out both;
+}
+
+.hero-enter .arch-outlined::before {
+  animation: arch-draw 1400ms 300ms cubic-bezier(0.3, 0.6, 0.2, 1) both;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+@keyframes photo-in {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+}
+
+@keyframes arch-draw {
+  from {
+    clip-path: inset(100% 0 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* Trust line under the hero buttons. */
+.hero-trust {
+  margin-top: 1.25rem;
+  font-size: 0.98rem;
+  color: var(--muted);
+}
+
+.stars {
+  color: var(--bud);
+  letter-spacing: 0.08em;
+}
+
+/* Michelle's signature under the About text. */
+.signature {
+  width: 11rem;
+  height: auto;
+  margin: 0.75rem 0 -0.5rem;
+}
+
+/* Real ceremonies photo strip. */
+.photo-strip-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.photo-strip-controls {
+  display: none;
+  gap: 0.5rem;
+  margin-bottom: 0.9rem;
+}
+
+.round-button {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1.5px solid var(--gum);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--gum);
+  font: 400 1.6rem/1 var(--serif);
+  cursor: pointer;
+  transition: background-color 150ms, transform 150ms;
+}
+
+.round-button:hover {
+  background: var(--sage-soft);
+}
+
+.round-button:active {
+  transform: scale(0.94);
+}
+
+.photo-strip-row {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 68%;
+  gap: 1rem;
+  margin: 1rem calc(-1 * var(--gutter)) 0;
+  padding: 0.25rem var(--gutter) 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--gutter);
+  scrollbar-width: thin;
+  scrollbar-color: var(--sage) transparent;
+}
+
+.photo-strip-row li {
+  scroll-snap-align: start;
+}
+
+.photo-open {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius);
+  background: none;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.photo-open img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  transition: transform 500ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.photo-open:hover img,
+.photo-open:focus-visible img {
+  transform: scale(1.03);
+}
+
+@media (min-width: 860px) {
+  .photo-strip-controls {
+    display: flex;
+  }
+
+  .photo-strip-row {
+    grid-auto-columns: 18rem;
+    margin: 1rem 0 0;
+    padding: 0.25rem 0 1rem;
+    scroll-padding-inline: 0;
+  }
+}
+
+/* Gallery photos open in the lightbox; a single portrait photo keeps its shape. */
+.gallery .photo-open img {
+  border-radius: 0;
+}
+
+.gallery-portrait {
+  max-width: 24rem;
+}
+
+.gallery-1.gallery-portrait .photo-open img {
+  aspect-ratio: 4 / 5;
+}
+
+.lightbox {
+  width: min(92vw, 60rem);
+  max-height: 92vh;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--ink);
+  overflow: visible;
+}
+
+.lightbox::backdrop {
+  background: rgba(20, 30, 25, 0.82);
+}
+
+.lightbox img {
+  display: block;
+  width: 100%;
+  max-height: 92vh;
+  object-fit: contain;
+  border-radius: var(--radius);
+}
+
+.lightbox button {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--gum);
+  font: 400 1.6rem/1 var(--serif);
+  cursor: pointer;
+  box-shadow: 0 6px 18px -8px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+  top: 0.6rem;
+  right: 0.6rem;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-prev {
+  left: 0.6rem;
+}
+
+.lightbox-next {
+  right: 0.6rem;
+}
+
+/* One featured quote, set large, before the tiles. */
+.featured-quote {
+  max-width: 46rem;
+  margin: 1.5rem 0 2rem;
+  padding-left: 1.5rem;
+  border-left: 3px solid var(--bud);
+}
+
+.featured-quote blockquote {
+  margin: 0;
+}
+
+.featured-quote p {
+  max-width: none;
+  margin: 0 0 0.75rem;
+  font-family: var(--sans);
+  font-size: clamp(1.2rem, 1vw + 1rem, 1.5rem);
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+.featured-quote figcaption {
+  font-weight: 700;
+  color: var(--gum);
+}
+
+/* Suburbs as plain links in columns. */
+.area-list {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  columns: 2;
+  column-gap: 1.5rem;
+  max-width: 40rem;
+}
+
+.area-list li {
+  break-inside: avoid;
+}
+
+.area-list a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  font-weight: 600;
+  text-decoration-color: var(--sage-soft);
+}
+
+.area-list a:hover {
+  text-decoration-color: var(--gum);
+}
+
+@media (min-width: 720px) {
+  .area-list {
+    columns: 3;
+  }
+}
+
+/* "You'll be talking to me" with Michelle's photo, above the contact heading. */
+.contact-person {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.contact-person-photo {
+  flex: none;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0 3px var(--white), 0 0 0 4.5px var(--sage);
+}
+
+.contact-person-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 25%;
+}
+
+.contact-person p {
+  margin: 0;
+  font-weight: 600;
+  color: var(--gum);
+}
+
+/* End of the FAQ page. */
+.faq-more p {
+  margin-bottom: 1.25rem;
+}
+
+/* Google reviews button on the Kind words page. */
+.reviews-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+}
+
+.reviews-cta .stars {
+  margin-right: 0.6rem;
+  color: #f1c8b9;
+}
+
+.reviews-cta > span {
+  color: var(--muted);
+}
+
+/* Phones: Call and Enquire fixed to the bottom of the screen. */
+.action-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  padding: 0.6rem var(--gutter) calc(0.6rem + env(safe-area-inset-bottom));
+  background: rgba(243, 245, 240, 0.97);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -10px 24px -18px rgba(35, 60, 50, 0.4);
+  transition: transform 250ms ease;
+}
+
+.action-bar .button {
+  min-height: 2.9rem;
+  padding: 0.6rem 1rem;
+}
+
+.action-bar.is-hidden {
+  transform: translateY(110%);
+}
+
+.site-footer {
+  padding-bottom: 4.5rem; /* room for the action bar */
+}
+
+@media (min-width: 860px) {
+  .action-bar {
+    display: none;
+  }
+
+  .site-footer {
+    padding-bottom: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-enter .hero-text > *,
+  .hero-enter .hero-photo img,
+  .hero-enter .arch-outlined::before {
+    animation: none;
+  }
 }
 
 /* ---------------------------------------------------------------- falling leaves */

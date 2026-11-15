@@ -1,15 +1,18 @@
 import { Link } from 'react-router';
 import PageHero from '../components/PageHero.jsx';
 import Photo from '../components/Photo.jsx';
+import PhotoStrip from '../components/PhotoStrip.jsx';
 import Testimonials from '../components/Testimonials.jsx';
 import ContactSection from '../components/ContactSection.jsx';
 import { home } from '../content/home.js';
 import { ceremonies } from '../content/ceremonies.js';
 import { regions, suburbsOf } from '../content/locations.js';
-import { featuredTestimonials } from '../content/testimonials.js';
+import { featuredTestimonials, testimonials } from '../content/testimonials.js';
 import { site } from '../siteConfig.js';
 
 export default function Home() {
+  const [lead, ...others] = featuredTestimonials;
+
   return (
     <>
       <PageHero heading={home.heading} lead={home.lead} image="michelle-reading">
@@ -21,6 +24,12 @@ export default function Home() {
             See ceremonies
           </a>
         </div>
+        <p className="hero-trust">
+          <span className="stars" aria-hidden="true">
+            ★★★★★
+          </span>{' '}
+          {home.trust} <Link to="/testimonials">Read all {testimonials.length} kind words</Link>
+        </p>
       </PageHero>
 
       <section id="ceremonies" className="section" aria-labelledby="ceremonies-heading">
@@ -57,6 +66,7 @@ export default function Home() {
           {home.about.paragraphs.map((p) => (
             <p key={p.slice(0, 24)}>{p}</p>
           ))}
+          <img className="signature" src="/brand/signature.svg" alt="Michelle" width="260" height="70" loading="lazy" />
           <p className="signoff">{site.signOff}</p>
         </div>
       </section>
@@ -73,9 +83,17 @@ export default function Home() {
         </ol>
       </section>
 
+      <PhotoStrip heading={home.moments.heading} names={home.moments.photos} />
+
       <section className="section" aria-labelledby="words-heading">
         <h2 id="words-heading">Kind words</h2>
-        <Testimonials items={featuredTestimonials} columns />
+        <figure className="featured-quote">
+          <blockquote>
+            <p>{lead.quote}</p>
+          </blockquote>
+          <figcaption>{lead.name}</figcaption>
+        </figure>
+        <Testimonials items={others} />
         <p className="section-more">
           <Link to="/testimonials">Read more from couples and families</Link>
         </p>
@@ -90,7 +108,7 @@ export default function Home() {
               <h3>
                 <Link to={r.path}>{r.name}</Link>
               </h3>
-              <ul className="area-links">
+              <ul className="area-list">
                 {suburbsOf(r).map((s) => (
                   <li key={s.slug}>
                     <Link to={s.path}>{s.name}</Link>

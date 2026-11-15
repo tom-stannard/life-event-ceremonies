@@ -35,6 +35,10 @@ export const ceremonies = [
         'You’ll need to complete a Notice of Intended Marriage and get it to me at least one month (and no more than 18 months) before your wedding. I’ll walk you through it, check your ID documents and make sure everything is in order.',
         'On the day you’ll sign your certificates in front of two witnesses aged 18 or over. Afterwards I lodge your marriage with NSW Births, Deaths & Marriages, so all you have to do is enjoy being married.',
       ],
+      link: {
+        href: 'https://www.ag.gov.au/families-and-marriage/publications/notice-intended-marriage',
+        label: 'Get the Notice of Intended Marriage form (Attorney-General’s Department)',
+      },
     },
     styles: {
       heading: 'Every kind of wedding',
@@ -130,7 +134,7 @@ export const ceremonies = [
       'Services in a chapel, at the graveside, at home or somewhere that meant something to them',
       'Memorials and ash scatterings, whenever the time feels right',
     ],
-    gallery: ['funeral-chapel'],
+    gallery: ['funeral-lantern'],
     testimonialTags: ['funeral'],
     faqTags: ['funeral'],
     gentle: true,

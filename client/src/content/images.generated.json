@@ -319,5 +319,14 @@
       960,
       1600
     ]
+  },
+  "funeral-lantern": {
+    "alt": "A lantern on a white-clothed table, set out for a memorial in a garden",
+    "width": 900,
+    "height": 2000,
+    "widths": [
+      480,
+      900
+    ]
   }
 }

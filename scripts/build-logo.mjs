@@ -30,6 +30,7 @@ const font = (pkg, file) =>
 const serif = font('@fontsource/fraunces', 'fraunces-latin-500-normal.woff');
 const serifItalic = font('@fontsource/fraunces', 'fraunces-latin-400-italic.woff');
 const sans = font('@fontsource/nunito-sans', 'nunito-sans-latin-600-normal.woff');
+const script = font('@fontsource/dancing-script', 'dancing-script-latin-600-normal.woff');
 
 // ---------------------------------------------------------------- the mark
 // Drawn in a 100×100 box. Angles are SVG-style degrees (0 = right, 90 = down).
@@ -105,6 +106,19 @@ const svgDoc = (w, h, body, bg) =>
   body +
   `</svg>\n`;
 
+// Phones: mark and name only (the byline is unreadable at header size).
+function compact({ gum = colours.gum, leaf = colours.leaf, blush = colours.blush } = {}) {
+  const tx = 110;
+  const title = text(serif, 'Life Event Ceremonies', tx, 64, 44, { fill: gum });
+  return svgDoc(tx + title.width + 4, 100, `<g>${mark({ gum, leaf, blush })}</g>${title.svg}`);
+}
+
+// Michelle's sign-off for the About section, set in a handwritten script.
+function signature() {
+  const sig = text(script, 'Michelle x', 4, 52, 54, { fill: colours.gum });
+  return svgDoc(sig.width + 12, 70, sig.svg).replace('aria-label="Life Event Ceremonies – Michelle Anne, Celebrant"', 'aria-label="Michelle"');
+}
+
 function horizontal({ gum = colours.gum, leaf = colours.leaf, blush = colours.blush, sub = colours.leaf } = {}) {
   const markSize = 100;
   const tx = markSize + 10;
@@ -133,6 +147,8 @@ const files = {
   'brand/logo-stacked.svg': stacked(),
   'brand/logo-stacked-reversed.svg': stacked(reversed),
   'brand/mark.svg': markOnly(),
+  'brand/logo-compact.svg': compact(),
+  'brand/signature.svg': signature(),
   'favicon.svg': favicon(),
 };
 for (const [name, svg] of Object.entries(files)) fs.writeFileSync(path.join(pub, name), svg);

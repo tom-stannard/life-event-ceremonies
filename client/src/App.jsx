@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from 'react-router';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import FallingLeaves from './components/FallingLeaves.jsx';
+import ActionBar from './components/ActionBar.jsx';
 import Home from './pages/Home.jsx';
 import CeremonyPage from './pages/CeremonyPage.jsx';
 import LocationPage from './pages/LocationPage.jsx';
@@ -50,6 +51,7 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
+      <ActionBar />
     </>
   );
 }

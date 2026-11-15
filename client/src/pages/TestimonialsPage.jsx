@@ -11,10 +11,14 @@ export default function TestimonialsPage() {
         <p className="lead">
           From couples I’ve married, families I’ve welcomed little ones with, and families I’ve helped say goodbye. Thank you all for letting me be part of your day.
         </p>
-        <p>
-          <a href={site.googleReviews} target="_blank" rel="noopener noreferrer">
-            Read my reviews on Google
+        <p className="reviews-cta">
+          <a href={site.googleReviews} target="_blank" rel="noopener noreferrer" className="button">
+            <span className="stars" aria-hidden="true">
+              ★★★★★
+            </span>
+            Read my Google reviews
           </a>
+          <span>Rated 5 stars on Google</span>
         </p>
       </section>
       <section className="section">

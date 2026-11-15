@@ -23,33 +23,30 @@ export default function LocationPage({ area }) {
         </div>
       </PageHero>
 
-      <section className="section split">
-        <div className="prose">
-          {area.paragraphs.map((p) => (
-            <p key={p.slice(0, 24)}>{p}</p>
+      <section className="section prose" aria-label={`About ${area.name}`}>
+        {area.paragraphs.map((p) => (
+          <p key={p.slice(0, 24)}>{p}</p>
+        ))}
+        <p>
+          In {area.name} I create{' '}
+          {ceremonies.map((c, i) => (
+            <span key={c.slug}>
+              {i > 0 && (i === ceremonies.length - 1 ? ' and ' : ', ')}
+              <Link to={c.path}>{c.name.toLowerCase()}</Link>
+            </span>
           ))}
-          {isSuburb && (
-            <p>
-              <Link to={region.path}>More about ceremonies across the {region.name} area</Link>
-            </p>
-          )}
-        </div>
-        <div className="offers">
-          <h2>Ceremonies in {area.name}</h2>
-          <ul className="link-list">
-            {ceremonies.map((c) => (
-              <li key={c.slug}>
-                <Link to={c.path}>{c.name}</Link>
-                <span>{c.card}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+          .
+        </p>
+        {isSuburb && (
+          <p>
+            <Link to={region.path}>More about ceremonies across the {region.name} area</Link>
+          </p>
+        )}
       </section>
 
       <section className="section" aria-labelledby="suburbs-heading">
         <h2 id="suburbs-heading">{isSuburb ? `Nearby in the ${region.name} area` : `Suburbs I cover around ${region.name}`}</h2>
-        <ul className="area-links">
+        <ul className="area-list">
           {isSuburb && (
             <li>
               <Link to={region.path}>{region.name}</Link>
@@ -76,7 +73,7 @@ export default function LocationPage({ area }) {
 
       <section className="section areas" aria-labelledby="nearby-heading">
         <h2 id="nearby-heading">Also covering</h2>
-        <ul className="area-links">
+        <ul className="area-list">
           {otherRegions.map((r) => (
             <li key={r.slug}>
               <Link to={r.path}>{r.name}</Link>

@@ -1,6 +1,8 @@
 import { Link } from 'react-router';
 import PageHero from '../components/PageHero.jsx';
 import Photo from '../components/Photo.jsx';
+import { useLightbox } from '../components/Lightbox.jsx';
+import images from '../content/images.generated.json';
 import Testimonials from '../components/Testimonials.jsx';
 import FaqList from '../components/FaqList.jsx';
 import ContactSection from '../components/ContactSection.jsx';
@@ -11,6 +13,11 @@ import { site } from '../siteConfig.js';
 export default function CeremonyPage({ ceremony: c }) {
   const words = testimonialsByTags(c.testimonialTags);
   const faqs = faqsByTag(c.faqTags);
+  const gallery = c.gallery ?? [];
+  const lightbox = useLightbox(gallery);
+  // A single photo shows in its own orientation (portrait or landscape).
+  const single = gallery.length === 1 ? images[gallery[0]] : null;
+  const singlePortrait = single && single.height > single.width;
 
   return (
     <div className={c.gentle ? 'is-gentle' : undefined}>
@@ -59,25 +66,35 @@ export default function CeremonyPage({ ceremony: c }) {
           {c.extra.paragraphs.map((p) => (
             <p key={p.slice(0, 24)}>{p}</p>
           ))}
+          {c.extra.link && (
+            <p>
+              <a href={c.extra.link.href} target="_blank" rel="noopener noreferrer">
+                {c.extra.link.label}
+              </a>
+            </p>
+          )}
           <p>
             <Link to="/faqs">More answers in the FAQs</Link>
           </p>
         </section>
       )}
 
-      {c.gallery?.length > 0 && (
+      {gallery.length > 0 && (
         <section className="section" aria-label="Photos">
-          <ul className={`gallery gallery-${Math.min(c.gallery.length, 3)}`}>
-            {c.gallery.map((name) => (
+          <ul className={`gallery gallery-${Math.min(gallery.length, 3)}${singlePortrait ? ' gallery-portrait' : ''}`}>
+            {gallery.map((name, i) => (
               <li key={name}>
-                <Photo
-                  name={name}
-                  box={c.gallery.length === 1 ? 1.5 : 0.8}
-                  sizes={c.gallery.length === 1 ? '(min-width: 720px) 40rem, 92vw' : '(min-width: 860px) 22rem, 46vw'}
-                />
+                <button type="button" className="photo-open" onClick={() => lightbox.open(i)}>
+                  <Photo
+                    name={name}
+                    box={single ? (singlePortrait ? 0.8 : 1.5) : 0.8}
+                    sizes={single ? (singlePortrait ? '(min-width: 480px) 24rem, 92vw' : '(min-width: 720px) 40rem, 92vw') : '(min-width: 860px) 22rem, 46vw'}
+                  />
+                </button>
               </li>
             ))}
           </ul>
+          {lightbox.dialog}
         </section>
       )}
 

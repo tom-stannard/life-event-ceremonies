@@ -1,9 +1,10 @@
 import Photo from './Photo.jsx';
 
-// Heading and lead beside a photo in the signature arch frame.
+// Heading and lead beside a photo in the signature arch frame. It enters once
+// as the page loads (see .hero-enter in styles.css; off for reduced motion).
 export default function PageHero({ heading, lead, image, children }) {
   return (
-    <section className="hero">
+    <section className="hero hero-enter">
       <div className="hero-text">
         <h1>{heading}</h1>
         {lead && <p className="lead">{lead}</p>}

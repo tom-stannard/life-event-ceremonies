@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { enquiryTypes } from '../content/enquiry.js';
 import { site, phoneHref } from '../siteConfig.js';
 
@@ -15,10 +15,16 @@ const empty = {
   website: '', // honeypot: real people never see or fill this
 };
 
-export default function EnquiryForm({ defaultType = '' }) {
+export default function EnquiryForm({ defaultType = '', gentle = false }) {
   const [values, setValues] = useState({ ...empty, ceremonyType: defaultType });
   const [status, setStatus] = useState('idle'); // idle | sending | sent | error
   const [error, setError] = useState('');
+  // Earliest choosable date: today, worked out in the visitor's browser after load.
+  const [today, setToday] = useState(undefined);
+  useEffect(() => {
+    const d = new Date();
+    setToday(new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10));
+  }, []);
 
   const set = (field) => (e) => setValues((v) => ({ ...v, [field]: e.target.value }));
 
@@ -88,7 +94,7 @@ export default function EnquiryForm({ defaultType = '' }) {
       <div className="field-row">
         <label>
           <span>Date <span className="optional">(if you know it)</span></span>
-          <input type="date" name="date" value={values.date} onChange={set('date')} />
+          <input type="date" name="date" min={today} value={values.date} onChange={set('date')} />
         </label>
         <label>
           <span>Where <span className="optional">(suburb or venue)</span></span>
@@ -96,8 +102,12 @@ export default function EnquiryForm({ defaultType = '' }) {
         </label>
       </div>
       <label>
-        Tell me about your plans
-        <textarea name="message" rows="5" required value={values.message} onChange={set('message')} placeholder="Who, what, when, where, and anything else you’d like me to know" />
+        {gentle ? 'Tell me a little about your loved one and what you need' : 'Tell me about your plans'}
+        <textarea name="message" rows="5" required value={values.message} onChange={set('message')} placeholder={
+          gentle
+            ? 'Their name, when and where you’d like the service, and anything else you’d like me to know'
+            : 'Who, what, when, where, and anything else you’d like me to know'
+        } />
       </label>
       <label>
         <span>How did you hear about me? <span className="optional">(optional)</span></span>
