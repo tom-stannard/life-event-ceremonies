@@ -10,3 +10,4 @@ npm-debug.log*
 
 # Owner's original photos (commit resized web versions under client/ instead)
 local assets/
+client/dist-ssr/

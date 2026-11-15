@@ -1,0 +1,44 @@
+{
+  "_comment": "Photos used on the site. 'src' is relative to 'local assets/Photos/' (gitignored originals). Run `npm run images` after editing; outputs go to client/public/images and client/src/content/images.generated.json. Stock photos need a 'credit' entry.",
+  "images": {
+    "michelle-laughing": { "src": "PB060578 (1).JPG", "alt": "Michelle laughing as she reads from a ceremony script in a garden", "focus": "55% 35%" },
+    "michelle-garden": { "src": "Michelle Park shot 2.jpg", "alt": "Michelle holding her ceremony folder in a garden beside a birdbath", "focus": "50% 40%" },
+    "michelle-headshot": { "src": "headshot 1.jpg", "alt": "Portrait of Michelle Anne, celebrant", "focus": "50% 30%" },
+    "michelle-reading": { "src": "728226174_976768858516386_5670018957185565328_n.jpg", "alt": "Michelle smiling down at her ceremony folder in a garden rotunda" },
+
+    "wedding-forest-kiss": { "src": "Jess&Pat-190.jpg", "alt": "Michelle applauds as a couple kiss beneath towering trees, with a string quartet behind them", "focus": "50% 45%" },
+    "wedding-forest-wide": { "src": "Jess&Pat-190_edited.jpg", "alt": "A couple kiss in a forest clearing as Michelle and a groomsman applaud" },
+    "wedding-trio": { "src": "Jess&Pat-064_edited.jpg", "alt": "Michelle standing with two grooms on a leafy garden path" },
+    "wedding-walk": { "src": "Jess&Pat-329.jpg", "alt": "A newly married couple walking hand in hand through a eucalyptus forest" },
+    "wedding-rings": { "src": "Jess&Pat-127.jpg", "alt": "Two wedding rings held out in their boxes" },
+    "wedding-hands": { "src": "Jess&Pat-157.jpg", "alt": "Black and white photo of a couple holding hands during their vows" },
+    "wedding-signing": { "src": "Jess&Pat-182.jpg", "alt": "Signing the marriage certificate on a timber table" },
+    "wedding-bouquet": { "src": "Jess&Pat-261.jpg", "alt": "A bride's bouquet of roses and gum leaves" },
+    "wedding-quartet": { "src": "Jess&Pat-121.jpg", "alt": "A string quartet playing under market umbrellas in a garden" },
+    "wedding-garden-vows": { "src": "7R508098.jpg", "alt": "Michelle leading a couple's vows in front of a floral arbour" },
+    "wedding-bush-garden": { "src": "received_2419712704898775.jpeg", "alt": "A couple holding hands in a bush garden ceremony as Michelle officiates" },
+    "wedding-barn": { "src": "received_899871618501308.jpeg", "alt": "A couple exchanging vows under a rose-covered timber arch beside a brick barn" },
+    "wedding-barn-wide": { "src": "received_402979242719120.jpeg", "alt": "Michelle reading to a couple beneath a floral arch outside a heritage brick barn" },
+    "wedding-lawn-signing": { "src": "Screenshot 2026-11-15 185938.png", "alt": "Michelle guiding a couple as they sign their marriage certificate on the lawn" },
+    "wedding-certificate": { "src": "Screenshot 2026-11-15 185908.png", "alt": "Michelle with a newly married couple holding their certificate" },
+    "wedding-laughter": { "src": "Screenshot 2026-11-15 185815.png", "alt": "A bride throws her head back laughing during the ceremony" },
+    "wedding-window": { "src": "MA-243.jpg", "alt": "A couple signing their marriage paperwork by a bright window with Michelle" },
+    "wedding-lookout": { "src": "IMG_20261108_132840.jpg", "alt": "Two brides exchanging vows at a lookout with Michelle between them" },
+    "wedding-arch-lawn": { "src": "548333863_756295333897074_4044209612336497005_n.jpg", "alt": "A couple and Michelle beneath a white floral arch on a green lawn" },
+    "wedding-autumn": { "src": "PXL_20260626_021323110.MP.jpg", "alt": "Michelle with a couple holding their marriage certificate among autumn trees" },
+
+    "vow-renewal": { "src": "PXL_20250329_044625594~3.jpg", "alt": "A couple renewing their vows, holding their certificate with family around them", "trimTop": 0.12 },
+
+    "naming-balloons": { "src": "PXL_20241208_012759050~2.jpg", "alt": "Michelle speaking at a naming ceremony as parents hold their daughter under pastel balloons" },
+    "naming-certificate": { "src": "received_496628759114755.jpeg", "alt": "Michelle with a mother and baby holding the naming certificate" },
+    "naming-family": { "src": "PXL_20241208_014305637~2.jpg", "alt": "A family celebrating their daughter's naming day with Michelle" },
+    "naming-cradle": { "src": "Stock/pexels-hussein-altameemi-5969905.jpg", "alt": "A parent cradling a newborn baby wrapped in white", "credit": { "photographer": "Hussein Altameemi", "url": "https://www.pexels.com/photo/5969905/" } },
+    "naming-newborn": { "src": "Stock/pexels-baby-concept-3169971.jpg", "alt": "A sleeping newborn wrapped in teal with a flower crown", "credit": { "photographer": "Baby Concept", "url": "https://www.pexels.com/photo/3169971/" } },
+
+    "funeral-memorial": { "src": "Stock/pexels-cottonbro-10496221.jpg", "alt": "White roses laid beside a framed photograph and urn", "credit": { "photographer": "cottonbro studio", "url": "https://www.pexels.com/photo/10496221/" } },
+    "funeral-chapel": { "src": "Stock/pexels-pavel-danilyuk-7317734.jpg", "alt": "Mourners seated in a softly lit chapel with candles and flowers", "credit": { "photographer": "Pavel Danilyuk", "url": "https://www.pexels.com/photo/7317734/" } },
+
+    "other-commitment": { "src": "Stock/pexels-kampus-production-8915605.jpg", "alt": "Two men holding hands as they make their promises", "credit": { "photographer": "Kampus Production", "url": "https://www.pexels.com/photo/8915605/" } },
+    "other-beach": { "src": "Stock/pexels-miriam-salgado-10733603.jpg", "alt": "Beach ceremony signs reading shoes here, vows there", "credit": { "photographer": "Miriam Salgado", "url": "https://www.pexels.com/photo/10733603/" } }
+  }
+}
