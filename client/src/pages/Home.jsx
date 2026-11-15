@@ -29,7 +29,7 @@ export default function Home() {
           {ceremonies.map((c) => (
             <li key={c.slug}>
               <Link to={c.path} className="ceremony-tile">
-                <div className="arch arch-small">
+                <div className="circle">
                   <Photo name={c.image} sizes="(min-width: 860px) 18vw, 30vw" />
                 </div>
                 <div>
@@ -44,7 +44,7 @@ export default function Home() {
 
       <section className="section about" aria-labelledby="about-heading">
         <div className="about-photo">
-          <div className="arch">
+          <div className="rounded">
             <Photo name="michelle-about" sizes="(min-width: 860px) 30vw, 70vw" />
           </div>
         </div>
