@@ -609,9 +609,12 @@ main {
   transform: scale(0.9);
 }
 
+/* A small blush gum leaf (the logo's leaf) that travels along the ring.
+   It sits on the ring line at the top of this box, lying along the ring,
+   so rotating the box carries it round like a leaf on a vine. */
 .circle::after {
-  inset: -12px;
-  background: radial-gradient(circle at 50% 5px, var(--bud) 4.5px, transparent 5px);
+  inset: -14px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 10'%3E%3Cpath d='M0 5C5 .2 13 0 24 5C13 10 5 9.8 0 5Z' fill='%23c98f7e'/%3E%3Cpath d='M1.5 5H21' stroke='%23f3f5f0' stroke-width='.7' opacity='.8'/%3E%3C/svg%3E") 50% 1px / 26px 11px no-repeat;
   opacity: 0;
   transform: rotate(-120deg);
 }
