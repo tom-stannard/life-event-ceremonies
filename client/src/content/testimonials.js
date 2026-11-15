@@ -1,10 +1,14 @@
 // Client testimonials. Source text and display rules: docs/testimonials.md.
 // Long reviews are trimmed to their strongest lines ("…" marks a cut);
 // spelling lightly tidied. `featured` ones appear on the home page.
+// `year` only where it's certain: Google showed relative dates ("2 years ago")
+// when the reviews were copied on 2026-11-15, which only pin down a year for
+// reviews under 12 months old. Add years as Michelle confirms them.
 
 export const testimonials = [
   {
     name: 'Jess',
+    year: 2026,
     tag: 'wedding',
     featured: true,
     quote:
@@ -26,6 +30,7 @@ export const testimonials = [
   },
   {
     name: 'Mel & Luke',
+    year: 2026,
     tag: 'wedding',
     featured: true,
     quote:
@@ -95,6 +100,7 @@ export const testimonials = [
   },
   {
     name: 'Bianca',
+    year: 2026,
     tag: 'wedding',
     quote:
       'Michelle, an absolute star. She was the best celebrant I could have asked for. We very last-minute planned the wedding and Michelle was so chill about my severe lack of organisation. I’m so glad we decided to have our wedding at home and Michelle marry us.',

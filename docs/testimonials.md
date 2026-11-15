@@ -77,6 +77,8 @@ Peta Furness also left a review (~2024) with a rating but no text, so it isn't u
 
 ## Using them on the site
 
+- **Years (owner's direction, 2026-11-16):** show "Name • year" where the year is certain, otherwise just the name. Only Jess, Mel & Luke and Bianca have a certain year (2026); Google's "a year ago" / "2 years ago" each span two calendar years, and the old-site testimonials have no dates. Add a `year` in `client/src/content/testimonials.js` as Michelle confirms dates.
+
 - Show the display name, not the Google username.
 - Light tidying of spelling and punctuation is fine (e.g. "comemorate", "reccomending", "thier"); keep the wording and meaning. Long reviews can be trimmed to their strongest lines, marking cuts with "…".
 - **Strongest for the home page:** Jess, Sam & Emma, Mel & Luke, Annette, Aimee, Ben.

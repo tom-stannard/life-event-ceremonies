@@ -9,7 +9,10 @@ export default function Testimonials({ items, highlightFirst = false }) {
             <blockquote>
               <p>{t.quote}</p>
             </blockquote>
-            <figcaption>{t.name}</figcaption>
+            <figcaption>
+              {t.name}
+              {t.year && <span className="testimonial-year"> • {t.year}</span>}
+            </figcaption>
           </figure>
         </li>
       ))}

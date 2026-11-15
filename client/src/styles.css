@@ -1657,6 +1657,59 @@ main {
   }
 }
 
+/* Home: suburbs as chips with a map pin, in the same 2 / 3 columns. */
+.area-chips {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+  columns: auto;
+}
+
+@media (min-width: 720px) {
+  .area-chips {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.area-chips a {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.4rem 0.85rem 0.4rem 0.7rem;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--gum);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: border-color 150ms, background-color 150ms, transform 150ms;
+}
+
+.area-chips .pin-icon {
+  flex: none;
+  color: var(--bud);
+  transition: transform 200ms;
+}
+
+.area-chips a:hover {
+  border-color: var(--sage);
+  background: var(--sage-soft);
+  transform: translateY(-2px);
+}
+
+.area-chips a:hover .pin-icon {
+  transform: translateY(-2px);
+}
+
+/* Testimonial year after the name: "Jess • 2026". */
+.testimonial-year {
+  font-weight: 400;
+  color: var(--muted);
+}
+
 /* "You'll be talking to me" with Michelle's photo, above the contact heading. */
 .contact-person {
   display: flex;

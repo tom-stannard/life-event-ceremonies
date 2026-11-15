@@ -3,6 +3,7 @@ import PageHero from '../components/PageHero.jsx';
 import Photo from '../components/Photo.jsx';
 import PhotoStrip from '../components/PhotoStrip.jsx';
 import CeremonySprig from '../components/CeremonySprig.jsx';
+import PinIcon from '../components/PinIcon.jsx';
 import Testimonials from '../components/Testimonials.jsx';
 import ContactSection from '../components/ContactSection.jsx';
 import { home } from '../content/home.js';
@@ -102,10 +103,13 @@ export default function Home() {
               <h3>
                 <Link to={r.path}>{r.name}</Link>
               </h3>
-              <ul className="area-list">
+              <ul className="area-list area-chips">
                 {suburbsOf(r).map((s) => (
                   <li key={s.slug}>
-                    <Link to={s.path}>{s.name}</Link>
+                    <Link to={s.path}>
+                      <PinIcon />
+                      {s.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
