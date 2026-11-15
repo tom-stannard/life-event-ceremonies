@@ -38,6 +38,9 @@ Rhiannon & Andrew
 "I just wanted to say a massive thankyou for everything you did yesterday. The naming ceremony was everything and more. Thankyou for all the time and effort you put in for making a lovely service for my daughter."
 Jennifer
 
+"Michelle, an absolute star. She was the best celebrant I could have asked for. We very last min planned the wedding and Michelle was so chill about my severe lack of organisation. She made the celebration so special. I'm so glad we decided to have our wedding at home and Michelle marry us. Thank you Michelle. X"
+Bianca
+
 
 
 ## Weddings
