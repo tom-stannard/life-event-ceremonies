@@ -113,6 +113,9 @@ export default function EnquiryForm({ defaultType = '' }) {
           <a href={phoneHref}>{site.phone}</a>.
         </p>
       )}
+      <p className="form-status" role="status" aria-live="polite">
+        {status === 'sending' ? 'Sending your enquiry…' : ''}
+      </p>
       <button type="submit" className="button" disabled={status === 'sending'}>
         {status === 'sending' ? 'Sending…' : 'Send enquiry'}
       </button>

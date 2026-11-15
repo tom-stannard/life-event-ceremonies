@@ -12,7 +12,7 @@ export default function FaqPage() {
         </p>
       </section>
       <section className="section">
-        <FaqList groups={faqGroups} />
+        <FaqList groups={faqGroups} headingLevel={2} />
       </section>
       <ContactSection />
     </>

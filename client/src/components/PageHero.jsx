@@ -11,7 +11,7 @@ export default function PageHero({ heading, lead, image, children }) {
       </div>
       <div className="hero-photo">
         <div className="arch arch-outlined">
-          <Photo name={image} eager sizes="(min-width: 860px) 42vw, 92vw" />
+          <Photo name={image} eager box={0.8} sizes="(min-width: 860px) 30rem, (min-width: 480px) 26rem, 82vw" />
         </div>
       </div>
     </section>

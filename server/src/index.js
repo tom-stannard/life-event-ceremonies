@@ -31,6 +31,7 @@ app.use((req, res, next) => {
 const retired = {
   '/locations/campbelltown': '/locations/camden',
   '/locations/south-west-sydney': '/locations/camden',
+  '/index.html': '/',
 };
 app.use((req, res, next) => (retired[req.path] ? res.redirect(301, retired[req.path]) : next()));
 

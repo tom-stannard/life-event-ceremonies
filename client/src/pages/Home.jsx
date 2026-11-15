@@ -33,7 +33,7 @@ export default function Home() {
                 <Link to={c.path} className="ceremony-tile">
                   <div className="circle">
                     <span className="circle-clip">
-                      <Photo name={c.image} sizes="(min-width: 860px) 14rem, 30vw" />
+                      <Photo name={c.image} box={1} sizes="(min-width: 860px) 14rem, 6rem" />
                     </span>
                   </div>
                   <div>
@@ -49,7 +49,7 @@ export default function Home() {
       <section className="section about" aria-labelledby="about-heading">
         <div className="about-photo">
           <div className="arch">
-            <Photo name="michelle-about" sizes="(min-width: 860px) 30vw, 70vw" />
+            <Photo name="michelle-about" box={0.8} sizes="(min-width: 860px) 26rem, 70vw" />
           </div>
         </div>
         <div className="about-text">

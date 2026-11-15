@@ -70,7 +70,11 @@ export default function CeremonyPage({ ceremony: c }) {
           <ul className={`gallery gallery-${Math.min(c.gallery.length, 3)}`}>
             {c.gallery.map((name) => (
               <li key={name}>
-                <Photo name={name} sizes="(min-width: 860px) 30vw, 46vw" />
+                <Photo
+                  name={name}
+                  box={c.gallery.length === 1 ? 1.5 : 0.8}
+                  sizes={c.gallery.length === 1 ? '(min-width: 720px) 40rem, 92vw' : '(min-width: 860px) 22rem, 46vw'}
+                />
               </li>
             ))}
           </ul>
