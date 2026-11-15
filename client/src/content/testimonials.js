@@ -1,9 +1,9 @@
 // Client testimonials. Source text and display rules: docs/testimonials.md.
 // Long reviews are trimmed to their strongest lines ("…" marks a cut);
 // spelling lightly tidied. `featured` ones appear on the home page.
-// `year` only where it's certain: Google showed relative dates ("2 years ago")
-// when the reviews were copied on 2026-11-15, which only pin down a year for
-// reviews under 12 months old. Add years as Michelle confirms them.
+// `year` is a best guess from Google's relative dates when the reviews were
+// copied on 2026-11-15 ("a year ago" = 2025, "2 years ago" = 2024, "3 years
+// ago" = 2023), approved by the owner. The old-site testimonials have no year.
 
 export const testimonials = [
   {
@@ -16,6 +16,7 @@ export const testimonials = [
   },
   {
     name: 'Sam & Emma',
+    year: 2024,
     tag: 'wedding',
     featured: true,
     quote:
@@ -45,6 +46,7 @@ export const testimonials = [
   },
   {
     name: 'Aimee',
+    year: 2024,
     tag: 'wedding',
     featured: true,
     quote:
@@ -52,6 +54,7 @@ export const testimonials = [
   },
   {
     name: 'Annette',
+    year: 2024,
     tag: 'wedding',
     quote:
       'We felt at ease with Michelle from our very first meeting and knew straight away that she was the one to marry us! She guided us through everything from what the ceremony would entail to all the legal jargon and paperwork.',
@@ -64,6 +67,7 @@ export const testimonials = [
   },
   {
     name: 'Ben',
+    year: 2024,
     tag: 'wedding',
     quote:
       'She truly listened and understood our needs, exuded incredible friendliness, and even went above and beyond in her preparation. … Her warmth and great sense of humour made everyone feel comfortable and created a special and memorable ceremony from start to finish.',
@@ -76,12 +80,14 @@ export const testimonials = [
   },
   {
     name: 'Leanne',
+    year: 2025,
     tag: 'wedding',
     quote:
       'Michelle was simply amazing. She made us feel so relaxed and the way she automatically included our son in the ceremony with ease was perfection. Cannot recommend Michelle enough. Simply the best!',
   },
   {
     name: 'John',
+    year: 2023,
     tag: 'elopement',
     quote:
       'Michelle Stannard, our celebrant for our elopement ceremony, was simply exceptional. Her impeccable organisation, warmth, and wonderful sense of humour transformed our intimate event into an unforgettable experience. … Her heartfelt words were a reflection of our love and commitment.',
@@ -94,6 +100,7 @@ export const testimonials = [
   },
   {
     name: 'Sonjae',
+    year: 2023,
     tag: 'wedding',
     quote:
       'She is a true professional, super informative, with a heart full of love and a talent for crafting beautiful moments. … In addition to officiating, she took us for a walk around the venue to show us all the best photo opportunities!',
@@ -112,35 +119,41 @@ export const testimonials = [
   },
   {
     name: 'Nicole',
+    year: 2024,
     tag: 'wedding',
     quote:
       'Michelle has a warm nature and a great sense of humour which really helps you feel comfortable on the big day. I would recommend her services to anyone. It was the best day of our lives.',
   },
   {
     name: 'John S.',
+    year: 2024,
     tag: 'wedding',
     quote:
       'Michelle is an incredible individual who will completely enhance your event with love, empathy and an intuitive (and hilarious) sense of humour. You will not be disappointed if you go with this extraordinary human.',
   },
   {
     name: 'Candis',
+    year: 2023,
     tag: 'wedding',
     quote:
       'She made our wedding day feel extra special and put up with our crazy families with a smile on her face. She’s great company and she did such a great job on our wedding day.',
   },
   {
     name: 'Liz',
+    year: 2024,
     tag: 'wedding',
     quote:
       'As soon as you meet Michelle you feel at ease and comfortable in her presence. Michelle is warm, kind and has a great sense of humour. Absolutely recommend without hesitation.',
   },
   {
     name: 'Keith',
+    year: 2025,
     tag: 'wedding',
     quote: 'A wonderful experience dealing with Michelle! She is professional, efficient, and understanding. Highly recommended!',
   },
   {
     name: 'Racheal',
+    year: 2024,
     tag: 'wedding',
     quote: 'Michelle was absolutely wonderful. She helped to make our day feel special.',
   },

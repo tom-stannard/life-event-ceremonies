@@ -77,7 +77,7 @@ Peta Furness also left a review (~2024) with a rating but no text, so it isn't u
 
 ## Using them on the site
 
-- **Years (owner's direction, 2026-11-16):** show "Name • year" where the year is certain, otherwise just the name. Only Jess, Mel & Luke and Bianca have a certain year (2026); Google's "a year ago" / "2 years ago" each span two calendar years, and the old-site testimonials have no dates. Add a `year` in `client/src/content/testimonials.js` as Michelle confirms dates.
+- **Years (owner's direction, 2026-11-16):** show "Name • year", or just the name when there's no year. Years are best guesses from Google's relative dates on 2026-11-15, and the owner accepts they may be a year out: months ago = 2026 (Jess, Mel & Luke, Bianca), "a year ago" = 2025 (Leanne, Keith), "2 years ago" = 2024 (Annette, Ben, Sam & Emma, Nicole, Aimee, Liz, John S., Racheal), "3 years ago" = 2023 (John, Sonjae, Candis). The old-site testimonials have no year. Correct them in `client/src/content/testimonials.js` if Michelle knows better.
 
 - Show the display name, not the Google username.
 - Light tidying of spelling and punctuation is fine (e.g. "comemorate", "reccomending", "thier"); keep the wording and meaning. Long reviews can be trimmed to their strongest lines, marking cuts with "…".
