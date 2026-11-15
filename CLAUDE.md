@@ -6,6 +6,7 @@ Website for Michelle Anne – Life Event Ceremonies, a celebrant business. It's 
 
 - **Project facts, requirements and decisions** (business details, pages the site needs, hosting and deployment, assets): `docs/project-context.md`. Read it before any feature, content or deployment work.
 - **Old site copy** (page text, testimonials): `docs/legacy-site-copy.md`. Read it when writing or editing page content.
+- **Testimonials** (Google reviews, how to display them, recurring themes): `docs/testimonials.md`. Read it when building testimonial sections or writing copy about Michelle.
 - **Voice and content model** (agreed voice, plus the reference sites for page structure and tone): `docs/reference-sites.md`. Read it when planning pages or writing any copy.
 
 ## Recording context

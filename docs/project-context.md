@@ -40,7 +40,7 @@ The owner likes two reference sites (content only, not design): cindycheriechild
    - Other Ceremonies (new). Base the content on cindycheriechilds.au's page for now: commitment ceremonies, home blessings, blended family rituals, personal milestones, symbolic rituals. Write it in our own words.
 3. **Location pages** for local SEO, one per service area: Camden, Campbelltown, Wollondilly, South West Sydney. Each needs copy specific to its area, and they should be linked from the footer and the ceremony pages.
 4. **FAQs**, covering all ceremony types.
-5. **Testimonials**
+5. **Testimonials**: 22 so far (6 from the old site, 16 from Google). See [`testimonials.md`](testimonials.md).
 
 **No pricing or packages are shown** for now (owner's decision, 2026-11-15).
 
