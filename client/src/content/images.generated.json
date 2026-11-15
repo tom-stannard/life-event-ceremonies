@@ -1,25 +1,25 @@
 {
-  "michelle-laughing": {
-    "alt": "Michelle laughing as she reads from a ceremony script in a garden",
-    "width": 4608,
-    "height": 3456,
+  "michelle-reading": {
+    "alt": "Michelle laughing as she reads from her ceremony folder in a garden",
+    "width": 1024,
+    "height": 1014,
     "widths": [
       480,
       960,
-      1600
+      1024
     ],
-    "focus": "55% 35%"
+    "focus": "62% 40%"
   },
-  "michelle-garden": {
-    "alt": "Michelle holding her ceremony folder in a garden beside a birdbath",
-    "width": 4608,
-    "height": 3456,
+  "michelle-selfie": {
+    "alt": "Michelle smiling in front of a floral arch",
+    "width": 1134,
+    "height": 1133,
     "widths": [
       480,
       960,
-      1600
+      1134
     ],
-    "focus": "50% 40%"
+    "focus": "40% 50%"
   },
   "michelle-headshot": {
     "alt": "Portrait of Michelle Anne, celebrant",
@@ -31,16 +31,6 @@
       1600
     ],
     "focus": "50% 30%"
-  },
-  "michelle-reading": {
-    "alt": "Michelle smiling down at her ceremony folder in a garden rotunda",
-    "width": 1024,
-    "height": 1014,
-    "widths": [
-      480,
-      960,
-      1024
-    ]
   },
   "wedding-forest-kiss": {
     "alt": "Michelle applauds as a couple kiss beneath towering trees, with a string quartet behind them",
@@ -241,16 +231,6 @@
       1600
     ]
   },
-  "vow-renewal": {
-    "alt": "A couple renewing their vows, holding their certificate with family around them",
-    "width": 2268,
-    "height": 3548,
-    "widths": [
-      480,
-      960,
-      1600
-    ]
-  },
   "naming-balloons": {
     "alt": "Michelle speaking at a naming ceremony as parents hold their daughter under pastel balloons",
     "width": 2086,
@@ -320,16 +300,6 @@
       1600
     ]
   },
-  "other-commitment": {
-    "alt": "Two men holding hands as they make their promises",
-    "width": 6016,
-    "height": 4016,
-    "widths": [
-      480,
-      960,
-      1600
-    ]
-  },
   "other-beach": {
     "alt": "Beach ceremony signs reading shoes here, vows there",
     "width": 3400,
@@ -338,6 +308,24 @@
       480,
       960,
       1600
+    ]
+  },
+  "vow-renewal": {
+    "alt": "A couple dressed for a celebration beneath flowering jacaranda trees",
+    "width": 514,
+    "height": 913,
+    "widths": [
+      480,
+      514
+    ]
+  },
+  "family-celebration": {
+    "alt": "Michelle with a smiling family holding their certificate, a baby on mum’s hip",
+    "width": 640,
+    "height": 480,
+    "widths": [
+      480,
+      640
     ]
   }
 }

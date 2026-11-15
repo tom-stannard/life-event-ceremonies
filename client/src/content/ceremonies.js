@@ -143,7 +143,7 @@ export const ceremonies = [
     title: 'Commitment Ceremonies, Blessings & Milestones',
     description:
       'Commitment ceremonies, home blessings, blended family ceremonies and milestone celebrations by Michelle Anne, a celebrant in Spring Farm, NSW.',
-    image: 'other-commitment',
+    image: 'other-beach',
     card: 'Commitments, blessings and milestones. If it matters to you, let’s mark it.',
     heading: 'Other ceremonies',
     lead: 'Some of life’s biggest moments don’t come with a ready-made ceremony. If something matters to you, we can create a ceremony to mark it.',
@@ -164,7 +164,7 @@ export const ceremonies = [
       'Readings, poems and words written just for you',
       'Roles for family and friends',
     ],
-    gallery: ['other-beach', 'wedding-bouquet'],
+    gallery: ['family-celebration', 'wedding-bouquet'],
     testimonialTags: ['wedding', 'naming'],
     faqTags: ['planning'],
   },

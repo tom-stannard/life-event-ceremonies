@@ -12,7 +12,7 @@ import { site } from '../siteConfig.js';
 export default function Home() {
   return (
     <>
-      <PageHero heading={home.heading} lead={home.lead} image="michelle-laughing">
+      <PageHero heading={home.heading} lead={home.lead} image="michelle-reading">
         <div className="hero-actions">
           <a href="#contact" className="button">
             Enquire about your date
@@ -45,7 +45,7 @@ export default function Home() {
       <section className="section about" aria-labelledby="about-heading">
         <div className="about-photo">
           <div className="arch">
-            <Photo name="michelle-headshot" sizes="(min-width: 860px) 30vw, 70vw" />
+            <Photo name="michelle-selfie" sizes="(min-width: 860px) 30vw, 70vw" />
           </div>
         </div>
         <div className="about-text">
