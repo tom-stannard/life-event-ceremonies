@@ -20,7 +20,6 @@ export const home = {
   moments: {
     heading: 'Moments from real ceremonies',
     photos: [
-      'wedding-forest-kiss',
       'naming-balloons',
       'wedding-lookout',
       'wedding-laughter',
@@ -28,7 +27,6 @@ export const home = {
       'wedding-barn',
       'naming-group',
       'wedding-lawn-signing',
-      'wedding-walk',
       'wedding-certificate',
       'wedding-bush-garden',
       'wedding-autumn',
