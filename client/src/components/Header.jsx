@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router';
 import { ceremonies } from '../content/ceremonies.js';
 import { regions, suburbsOf } from '../content/locations.js';
-import FontSwitcher from './FontSwitcher.jsx';
 
 function Menu({ label, items }) {
   return (
@@ -51,8 +50,6 @@ export default function Header() {
   useEffect(() => setOpen(false), [pathname]);
 
   return (
-    <>
-    <FontSwitcher />
     <header className={`site-header${open ? ' is-open' : ''}`}>
       <div className="header-bar">
         <Link to="/" className="header-logo" aria-label="Life Event Ceremonies, home">
@@ -90,6 +87,5 @@ export default function Header() {
         </ul>
       </nav>
     </header>
-    </>
   );
 }
