@@ -27,7 +27,7 @@ On the site these details come from `client/src/siteConfig.js` (added 2026-11-15
 
 The old site has been decommissioned. Its copy and testimonials are in [`legacy-site-copy.md`](legacy-site-copy.md). Treat it as a reference: the copy may be revised, but every page it had stays, with written content.
 
-The owner likes how cindycheriechilds.au structures its content, and it's the model for our structure (content only, not design). The survey of that site is in [`reference-sites.md`](reference-sites.md).
+The owner likes two reference sites (content only, not design): cindycheriechilds.au is the model for **structure**, and marrymenicky.com.au is the model for **written voice and vibe**. The surveys and our agreed voice are in [`reference-sites.md`](reference-sites.md).
 
 ### Pages (agreed 2026-11-15)
 
@@ -59,9 +59,10 @@ The owner likes how cindycheriechilds.au structures its content, and it's the mo
 ## Hosting and deployment
 
 - Hosted on a **GoDaddy Economy** plan (cPanel), running as a cPanel **Node.js app** that tracks the `main` branch of `github.com/tom-stannard/life-event-ceremonies`.
-- `main` is what goes live, so keep it deployable.
+- **Deploying is manual:** pushing to `main` does not update the live site. The owner deploys by clicking **Publish** in the GoDaddy control panel. After pushing, tell the owner the push is ready to publish.
+- `main` is what goes live when published, so keep it deployable.
 - The app currently shows the coming soon page. Production confirmed working 2026-11-15 (`/api/health` returns ok).
-- Not yet recorded: whether a push to `main` deploys automatically or needs a manual pull in cPanel, and where `npm run build` runs (on the server, or built locally and committed). Ask the owner before relying on either.
+- **Build step (inferred, unconfirmed):** `client/dist` is gitignored, yet the live site serves the built React app, so Publish probably runs `npm install` and `npm run build` on the server. Don't commit build output. If a deploy ever serves a stale or missing frontend, check this first.
 
 ## Enquiries and email
 

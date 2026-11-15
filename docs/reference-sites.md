@@ -1,6 +1,21 @@
 # Reference sites
 
-Other celebrant sites the owner likes, used to guide **content structure**. They are not a guide for visual design. Write our own copy in Michelle's voice; don't copy their text.
+Other celebrant sites the owner likes. They guide content and tone, not visual design. Write our own copy in Michelle's voice; don't copy their text.
+
+| Site | What to take from it |
+|---|---|
+| cindycheriechilds.au | **Structure:** ceremony pages, location pages, FAQs, testimonials |
+| marrymenicky.com.au | **Written voice and vibe:** personality-led, warm, relaxed; reassuring FAQs |
+
+## Voice for Life Event Ceremonies
+
+This blends the two references with Michelle's own voice from the old site, which describes her as "friendly, calm and confident". Agreed direction (2026-11-15):
+
+- Write in the first person ("I"), talking directly to "you". Keep it warm, relaxed, personal and plain-spoken, with short sentences.
+- Let personality show with specific, real details about Michelle (ask her for them; don't invent anecdotes).
+- **Match the tone to the occasion.** Weddings, vow renewals and naming ceremonies can be playful and light. Funerals and celebrations of life stay warm, gentle and calm, with no jokes.
+- Reassure readers: say plainly how the process works and what's handled for them, including the legal paperwork for weddings.
+- Keep the signature line _"Your ceremony – your way."_
 
 ## cindycheriechilds.au
 
@@ -38,3 +53,24 @@ Shown on the home page, the location pages and a dedicated `/testimonials` page.
 - **Enquiry form fields:** name, email, phone, ceremony type, preferred date, ceremony location, "tell me about your vision", how did you hear about me.
 - **Calls to action:** "Contact me" and "Enquire now" repeated on every page.
 - **Footer:** contact details, social links, ABN, professional memberships (e.g. AFCC, Coalition of Celebrant Associations).
+
+## marrymenicky.com.au
+
+<https://www.marrymenicky.com.au/>. Surveyed 2026-11-15. The owner pointed to its **written content and vibe** as inspiration. It's a weddings-only celebrant in Sydney.
+
+### Voice and vibe
+
+- Reads like a friend who is also a professional; the celebrant's personality is the selling point.
+- First person, very informal, Australian register ("mates", "legends", "cheeky"). Short punchy lines.
+- Humour comes from self-deprecation and stage directions in asterisks (e.g. "*cue a happy dance*"), not emoji.
+- One clear positioning theme repeated across pages: the ceremony shouldn't be "the boring part".
+- An inclusive message (marriage equality, "you are welcome here") and an Acknowledgement of Country in the footer.
+
+### Content patterns worth reusing
+
+- **About:** opens with a funny hook, then the origin story (her first ceremony), a short list of what her ceremonies are like, personal "fun facts", how she works with couples (relaxed conversation rather than a questionnaire), and her experience in numbers. Signed off personally.
+- **Testimonials:** long, specific and emotional, headed with the couple's names and venue, with a couple photo. A link to Google reviews follows them.
+- **FAQs:** about 20 questions that walk through the whole journey and reassure: booking lead time, meeting before booking, travel, how to book, help with vows, what happens after booking, how the ceremony is personalised, the draft, the rehearsal, marriage equality, fees and what they include, what happens on the day, length, what she wears, PA system, MC services, legal eligibility (how soon you can marry, citizenship), couples overseas, years of experience.
+- **The process is explained** inside the FAQs: book, then a planning chat about 4 months out (including the Notice of Intended Marriage), a ceremony draft, a rehearsal, and the day itself. We could turn this into a short "How it works" section with numbered steps.
+- **Contact form:** names (both partners), email, mobile, date, time, ceremony type, location, "how did you find me?", "tell me about your plans". The direct email and phone are given as an alternative.
+- **Social proof:** press logos ("Featured on"), a gallery of real ceremonies, a blog of real weddings, recommended suppliers ("Vendor Mates"). These are optional extras for later, and only if Michelle has the material.
