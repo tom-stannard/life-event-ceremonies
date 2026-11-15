@@ -6,7 +6,8 @@ context, record it here (or update the line it changes) in the same session.
 
 ## Business
 
-- **Michelle Anne – Life Event Ceremonies**: a celebrant based in Spring Farm, NSW (Australia).
+- **Michelle Anne – Life Event Ceremonies**: a celebrant based in Spring Farm, NSW (Australia). Her full name is Michelle Stannard, and the surname can appear on the site (e.g. in testimonials).
+- Use Spring Farm as the location on the site. Ignore other addresses that appear in third-party listings, such as Menangle Rd, Camden (owner's direction, 2026-11-15).
 - Domain: <https://lifeeventceremonies.com.au/> (www also serves the site; no redirect to the main address yet).
 - Tone of the old site: warm, personal, first-person ("I"), sign-off line _"Your ceremony – your way."_
 - Use Australian English spelling (e.g. "organise", "colour").

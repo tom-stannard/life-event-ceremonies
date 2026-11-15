@@ -56,7 +56,7 @@ Peta Furness also left a review (~2024) with a rating but no text, so it isn't u
 9. **Nicole:** "Michelle has a warm nature and a great sense of humour which really helps you feel comfortable on the big day. I would recommend her services to anyone. So glad we had the opportunity for her to marry us. It was best day of our lives."
 
 10. **John:** "Michelle Stannard, our Celebrant for our elopement ceremony, was simply exceptional. Her impeccable organization, warmth, and wonderful sense of humor transformed our intimate event into an unforgettable experience. From the outset, she demonstrated a keen attention to detail and a genuine interest in getting to know us as a couple, infusing our ceremony with a personal touch. Michelle's humor created a relaxed and joyful atmosphere, making our small gathering feel truly special. Her heartfelt words were a reflection of our love and commitment. If you're seeking a Celebrant, we wholeheartedly recommend Michelle Stannard. She's a true professional and a master of her craft. Our heartfelt thanks to her for making our elopement ceremony unforgettable."
-    (Uses Michelle's surname. Until the owner confirms the surname can be published, show it as "Michelle".)
+    (Uses Michelle's surname, Stannard. The owner has approved publishing it, 2026-11-15.)
 
 11. **Aimee:** "Michelle was so kind and easy to work with.
     Even with last minute changes, and running late (true to my style lol) we never felt like we were inconveniencing or troubling her.
