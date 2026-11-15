@@ -2,6 +2,7 @@ import { Link } from 'react-router';
 import PageHero from '../components/PageHero.jsx';
 import Photo from '../components/Photo.jsx';
 import PhotoStrip from '../components/PhotoStrip.jsx';
+import CeremonySprig from '../components/CeremonySprig.jsx';
 import Testimonials from '../components/Testimonials.jsx';
 import ContactSection from '../components/ContactSection.jsx';
 import { home } from '../content/home.js';
@@ -42,6 +43,7 @@ export default function Home() {
                     <span className="circle-clip">
                       <Photo name={c.image} box={1} sizes="(min-width: 860px) 14rem, 6rem" />
                     </span>
+                    <CeremonySprig />
                   </div>
                   <div>
                     <h3>{c.name}</h3>
