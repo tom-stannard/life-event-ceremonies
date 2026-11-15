@@ -1,0 +1,97 @@
+import { Link } from 'react-router';
+import PageHero from '../components/PageHero.jsx';
+import Photo from '../components/Photo.jsx';
+import Testimonials from '../components/Testimonials.jsx';
+import ContactSection from '../components/ContactSection.jsx';
+import { home } from '../content/home.js';
+import { ceremonies } from '../content/ceremonies.js';
+import { locations } from '../content/locations.js';
+import { featuredTestimonials } from '../content/testimonials.js';
+import { site } from '../siteConfig.js';
+
+export default function Home() {
+  return (
+    <>
+      <PageHero heading={home.heading} lead={home.lead} image="michelle-laughing">
+        <div className="hero-actions">
+          <a href="#contact" className="button">
+            Enquire about your date
+          </a>
+          <a href="#ceremonies" className="button button-quiet">
+            See ceremonies
+          </a>
+        </div>
+      </PageHero>
+
+      <section id="ceremonies" className="section" aria-labelledby="ceremonies-heading">
+        <h2 id="ceremonies-heading">Ceremonies for every chapter</h2>
+        <ul className="ceremony-tiles">
+          {ceremonies.map((c) => (
+            <li key={c.slug}>
+              <Link to={c.path} className="ceremony-tile">
+                <div className="arch arch-small">
+                  <Photo name={c.image} sizes="(min-width: 860px) 18vw, 30vw" />
+                </div>
+                <div>
+                  <h3>{c.name}</h3>
+                  <p>{c.card}</p>
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="section about" aria-labelledby="about-heading">
+        <div className="about-photo">
+          <div className="arch">
+            <Photo name="michelle-headshot" sizes="(min-width: 860px) 30vw, 70vw" />
+          </div>
+        </div>
+        <div className="about-text">
+          <h2 id="about-heading">{home.about.heading}</h2>
+          {home.about.paragraphs.map((p) => (
+            <p key={p.slice(0, 24)}>{p}</p>
+          ))}
+          <p className="signoff">{site.signOff}</p>
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="steps-heading">
+        <h2 id="steps-heading">How it works</h2>
+        <ol className="steps">
+          {home.steps.map((s) => (
+            <li key={s.heading}>
+              <h3>{s.heading}</h3>
+              <p>{s.text}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section className="section" aria-labelledby="words-heading">
+        <h2 id="words-heading">Kind words</h2>
+        <Testimonials items={featuredTestimonials} columns />
+        <p className="section-more">
+          <Link to="/testimonials">Read more from couples and families</Link>
+        </p>
+      </section>
+
+      <section className="section areas" aria-labelledby="areas-heading">
+        <h2 id="areas-heading">Where I celebrate</h2>
+        <p>
+          I’m based in Spring Farm and look after couples and families right across Macarthur and South West Sydney.
+        </p>
+        <ul className="area-links">
+          {locations.map((l) => (
+            <li key={l.slug}>
+              <Link to={l.path}>{l.name}</Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <ContactSection />
+    </>
+  );
+}

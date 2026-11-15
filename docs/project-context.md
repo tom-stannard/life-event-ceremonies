@@ -8,7 +8,7 @@ context, record it here (or update the line it changes) in the same session.
 
 - **Michelle Anne – Life Event Ceremonies**: a celebrant based in Spring Farm, NSW (Australia). Her full name is Michelle Stannard, and the surname can appear on the site (e.g. in testimonials).
 - Use Spring Farm as the location on the site. Ignore other addresses that appear in third-party listings, such as Menangle Rd, Camden (owner's direction, 2026-11-15).
-- Domain: <https://lifeeventceremonies.com.au/> (www also serves the site; no redirect to the main address yet).
+- Domain: <https://lifeeventceremonies.com.au/>. The server redirects `www.` to the bare domain (added 2026-11-15).
 - Tone of the old site: warm, personal, first-person ("I"), sign-off line _"Your ceremony – your way."_
 - Use Australian English spelling (e.g. "organise", "colour").
 
@@ -45,6 +45,10 @@ The owner likes two reference sites (content only, not design): cindycheriechild
 
 **No pricing or packages are shown** for now (owner's decision, 2026-11-15).
 
+### Build status (2026-11-15)
+
+The full site was built on branch `site-build`: all pages above, the new logo, the contact form and the enquiry API. Copy that goes beyond what Michelle has confirmed is listed in [`content-to-confirm.md`](content-to-confirm.md).
+
 ### Build requirements (owner's direction, 2026-11-15)
 
 - **Mobile first:** many visitors will browse on phones. Design and test every page at phone width first.
@@ -62,24 +66,35 @@ The owner likes two reference sites (content only, not design): cindycheriechild
 - Hosted on a **GoDaddy Economy** plan (cPanel), running as a cPanel **Node.js app** that tracks the `main` branch of `github.com/tom-stannard/life-event-ceremonies`.
 - **Deploying is manual:** pushing to `main` does not update the live site. The owner deploys by clicking **Publish** in the GoDaddy control panel. After pushing, tell the owner the push is ready to publish.
 - `main` is what goes live when published, so keep it deployable.
-- The app currently shows the coming soon page. Production confirmed working 2026-11-15 (`/api/health` returns ok).
+- Production confirmed working 2026-11-15 (`/api/health` returns ok), showing the coming soon page until the `site-build` work is merged and published.
 - **Build step (inferred, unconfirmed):** `client/dist` is gitignored, yet the live site serves the built React app, so Publish probably runs `npm install` and `npm run build` on the server. Don't commit build output. If a deploy ever serves a stale or missing frontend, check this first.
+- `npm run build` now also prerenders every page to static HTML (`client/scripts/prerender.mjs`) and writes `sitemap.xml` and `robots.txt`. Express serves `/weddings` from `weddings.html` and returns `404.html` for unknown paths.
+- **Production environment variables** (set in the cPanel Node.js app settings; see `.env.example`): `RESEND_API_KEY`, `ENQUIRY_FROM`, `ENQUIRY_TO`, and `DB_HOST`, `DB_PORT`, `DB_USER`, `DB_PASSWORD`, `DB_NAME`. **Until at least one of email or database is configured, the live contact form shows an error** asking people to email or call instead.
 
 ## Enquiries and email
 
 - **Mailbox:** hello@lifeeventceremonies.com.au is a **Microsoft 365** mailbox. DNS is at GoDaddy (`ns49/ns50.domaincontrol.com`).
 - **DNS fix in progress (2026-11-15):** the domain had no MX records, so incoming mail was bouncing. The owner has started the fix in GoDaddy. In the latest check the `autodiscover` CNAME was in place, but the MX record and SPF TXT record weren't visible yet. When the fix is complete, expect an MX pointing to `*.mail.protection.outlook.com` and an SPF record including `spf.protection.outlook.com`. Confirm with `nslookup -type=mx lifeeventceremonies.com.au 8.8.8.8` before the email link goes live.
-- **Planned approach:** the Express server receives the form at `POST /api/enquiries`, validates it, saves it to MySQL, then emails a notification to the business address with Reply-To set to the enquirer. Saving every enquiry from the MVP onwards means none are lost if an email fails, and the admin view can be built on top later.
+- **How enquiries work (built 2026-11-15):** `POST /api/enquiries` (`server/src/enquiries.js`) validates the form (with a honeypot field and a rate limit of 5 per IP per 10 minutes), saves it to the MySQL `enquiries` table if `DB_*` is set (the table is created automatically, `server/src/db.js`), and emails it through Resend if `RESEND_API_KEY` is set (`server/src/mailer.js`), with Reply-To set to the enquirer. It succeeds if either step works. In local development with neither configured, it just logs the enquiry.
+- **To switch it on:** (1) create a Resend account, add the domain `lifeeventceremonies.com.au`, and add the DNS records Resend gives you (SPF/DKIM) in GoDaddy; (2) create a MySQL database and user in cPanel; (3) set the environment variables above in the cPanel Node.js app and restart it; (4) send a test enquiry.
 - **Sending mail from the site:** use a transactional email API over HTTPS (e.g. Resend, Postmark). Sending through Microsoft 365 SMTP (`smtp.office365.com:587`) is a poor fit for two reasons: GoDaddy shared hosting usually restricts outbound SMTP, and Microsoft 365 disables SMTP AUTH by default. The chosen email service will need its own DNS records (SPF include and DKIM) added in GoDaddy. Test on the live host.
 - **Admin view feasibility:** a cPanel Node.js app with MySQL can support it: password-protected `/admin` routes and a React screen for listing, viewing, replying to (sent by email), scheduling (date/status fields, optional calendar export) and deleting enquiries. Shared-hosting limits to plan around: modest CPU/RAM and process limits, the app may sleep when idle (slow first request), long-running background jobs need cPanel cron, and HTTPS must be in place before login is enabled.
 
 ## Assets
 
 - `local assets/` (gitignored) holds the owner's original photos: full-size phone images up to ~6 MB.
-- When a photo is used on the site, resize/compress it and put the web version in `client/public/` (or import it from `client/src/`). Keep the originals out of git.
+- Originals are in `local assets/Photos/` (stock picks in `Photos/Stock/`). There's also `local assets/Documents/notice-of-intended-marriage.DOCX`.
+- To add or swap a photo: list it in `scripts/images.json` (source file, alt text, optional `focus` and `credit`), then run `npm run images`. Web versions go to `client/public/images/` (committed) and their sizes to `client/src/content/images.generated.json`. Use it in a page with `<Photo name="…" />`.
 - Choosing images (owner's direction, 2026-11-15): use the real photos in `local assets/` where they fit. Where they leave gaps, use stock photos chosen by the agent. A stock photo must be licensed for free commercial use (e.g. Unsplash, Pexels). Record its source URL and licence next to the file, e.g. in `client/public/images/CREDITS.md`.
 
 ## Development
 
 - Development is done mainly by AI agents. See `CLAUDE.md` for the working rules.
+
+## Brand (created 2026-11-15; the owner may adjust it)
+
+- **Logo:** a ring that grows into a gum-leaf sprig with a blush bud (a wedding ring and new growth in one), beside "Life Event Ceremonies" with "Michelle Anne, Celebrant" underneath. Generated by `scripts/build-logo.mjs` (`npm run logo`) into `client/public/brand/`: horizontal and stacked versions, reversed versions, PNGs, and a 512px profile picture for social media. The text is converted to outlines, so the files work anywhere.
+- **Palette:** eucalyptus `#2f4f42`, sage `#7f9a84`, mist `#f3f5f0` (background), blush `#f1ddd5`, bud `#c98f7e`. Tokens are in `client/src/styles.css`.
+- **Type:** Fraunces (soft serif, headings and quotes) and Nunito Sans (body), self-hosted via Fontsource.
+- **Signature element:** photos framed in an arch shape, echoing the ceremony arbours in Michelle's photos. Funeral pages use quieter styling (`is-gentle`).
 - The owner develops on Windows (PowerShell), so npm scripts must work on Windows as well as Linux (the GoDaddy server). Use `cross-env` / `concurrently` rather than shell syntax like `VAR=x cmd` or `a & b`.

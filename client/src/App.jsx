@@ -1,64 +1,53 @@
-import { site } from './siteConfig.js';
+import { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router';
+import Header from './components/Header.jsx';
+import Footer from './components/Footer.jsx';
+import Home from './pages/Home.jsx';
+import CeremonyPage from './pages/CeremonyPage.jsx';
+import LocationPage from './pages/LocationPage.jsx';
+import FaqPage from './pages/FaqPage.jsx';
+import TestimonialsPage from './pages/TestimonialsPage.jsx';
+import NotFound from './pages/NotFound.jsx';
+import { ceremonies } from './content/ceremonies.js';
+import { locations } from './content/locations.js';
+import { routeFor } from './routes.js';
 
-function Rings() {
-  return (
-    <svg className="rings" viewBox="0 0 120 64" aria-hidden="true">
-      <circle cx="46" cy="32" r="24" />
-      <circle cx="74" cy="32" r="24" />
-    </svg>
-  );
+// Keep <title> and description in step with client-side navigation, and
+// scroll to the top (or to #contact) when the page changes.
+function usePageChange() {
+  const { pathname, hash } = useLocation();
+  useEffect(() => {
+    const route = routeFor(pathname);
+    document.title = route.title;
+    document.querySelector('meta[name="description"]')?.setAttribute('content', route.description);
+    if (hash) document.getElementById(hash.slice(1))?.scrollIntoView();
+    else window.scrollTo(0, 0);
+  }, [pathname, hash]);
 }
 
 export default function App() {
-  const contacts = [
-    site.email && { label: site.email, href: `mailto:${site.email}` },
-    site.phone && { label: site.phone, href: `tel:${site.phone.replace(/\s/g, '')}` },
-    site.facebook && { label: 'Facebook', href: site.facebook },
-    site.instagram && { label: 'Instagram', href: site.instagram },
-  ].filter(Boolean);
-
+  usePageChange();
   return (
-    <main className="page">
-      <div className="card">
-        <Rings />
-        <h1 className="name">{site.name}</h1>
-        <p className="tagline">{site.tagline}</p>
-
-        <div className="divider" aria-hidden="true">
-          <span />
-        </div>
-
-        <p className="lede">
-          Heartfelt, personal ceremonies for life&rsquo;s most meaningful moments.
-        </p>
-
-        <ul className="ceremonies">
-          {site.ceremonies.map((c) => (
-            <li key={c}>{c}</li>
+    <>
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
+      <Header />
+      <main id="main">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {ceremonies.map((c) => (
+            <Route key={c.path} path={c.path} element={<CeremonyPage ceremony={c} />} />
           ))}
-        </ul>
-
-        <p className="soon">Our new website is coming soon</p>
-
-        {contacts.length > 0 && (
-          <nav className="contact" aria-label="Contact">
-            {contacts.map((c) => (
-              <a
-                key={c.href}
-                href={c.href}
-                {...(c.href.startsWith('http') && { target: '_blank', rel: 'noopener noreferrer' })}
-              >
-                {c.label}
-              </a>
-            ))}
-          </nav>
-        )}
-      </div>
-
-      <footer className="footer">
-        &copy; {new Date().getFullYear()} {site.name} &ndash; {site.tagline}
-        {site.location && <> &middot; {site.location}</>}
-      </footer>
-    </main>
+          {locations.map((l) => (
+            <Route key={l.path} path={l.path} element={<LocationPage location={l} />} />
+          ))}
+          <Route path="/faqs" element={<FaqPage />} />
+          <Route path="/testimonials" element={<TestimonialsPage />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+      <Footer />
+    </>
   );
 }
