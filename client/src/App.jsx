@@ -43,7 +43,11 @@ export default function App() {
         {contacts.length > 0 && (
           <nav className="contact" aria-label="Contact">
             {contacts.map((c) => (
-              <a key={c.href} href={c.href}>
+              <a
+                key={c.href}
+                href={c.href}
+                {...(c.href.startsWith('http') && { target: '_blank', rel: 'noopener noreferrer' })}
+              >
                 {c.label}
               </a>
             ))}
@@ -53,6 +57,7 @@ export default function App() {
 
       <footer className="footer">
         &copy; {new Date().getFullYear()} {site.name} &ndash; {site.tagline}
+        {site.location && <> &middot; {site.location}</>}
       </footer>
     </main>
   );

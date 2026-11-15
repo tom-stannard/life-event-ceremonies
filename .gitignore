@@ -7,3 +7,6 @@ npm-debug.log*
 .DS_Store
 .vscode/
 .idea/
+
+# Owner's original photos (commit resized web versions under client/ instead)
+local assets/

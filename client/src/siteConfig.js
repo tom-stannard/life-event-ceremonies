@@ -3,9 +3,10 @@
 export const site = {
   name: 'Michelle Anne',
   tagline: 'Life Event Ceremonies',
-  email: null, // e.g. 'hello@lifeeventceremonies.com.au'
-  phone: null, // e.g. '0400 000 000'
-  facebook: null, // full URL
-  instagram: null, // full URL
+  location: 'Spring Farm, NSW',
+  email: 'hello@lifeeventceremonies.com.au',
+  phone: '0412 235 472',
+  facebook: 'https://www.facebook.com/people/Michelle-Anne-Celebrant-Life-Event-Ceremonies/100085498419318/',
+  instagram: 'https://www.instagram.com/michelleannecelebrant',
   ceremonies: ['Weddings', 'Vow Renewals', 'Naming Ceremonies', 'Funerals & Memorials'],
 };

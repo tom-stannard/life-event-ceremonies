@@ -17,6 +17,7 @@ Currently shows a **coming soon** page.
 │       └── siteConfig.js  Business name, contact details, ceremony list
 ├── server/            Express server
 │   └── src/index.js   API routes + serves client/dist in production
+├── docs/              Project context and reference copy
 └── package.json       npm workspaces + top-level scripts
 ```
 
@@ -45,5 +46,11 @@ Anything left as `null` is hidden on the page.
 
 ## Hosting
 
-Domain and hosting are with GoDaddy. Deployment steps to be added once the hosting
-plan is confirmed (cPanel "Setup Node.js App" vs. a VPS).
+GoDaddy Economy plan, running as a cPanel Node.js app that tracks `main`.
+See [`docs/project-context.md`](docs/project-context.md) for details.
+
+## Project docs
+
+- [`CLAUDE.md`](CLAUDE.md): working rules for AI agents
+- [`docs/project-context.md`](docs/project-context.md): business details, site requirements, hosting, decisions
+- [`docs/legacy-site-copy.md`](docs/legacy-site-copy.md): text from the old site, kept for reference
