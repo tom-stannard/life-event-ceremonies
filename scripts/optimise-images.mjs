@@ -6,6 +6,8 @@
 // client/public/images/<name>-<width>.webp, client/src/content/images.generated.json
 // (sizes + alt text for the <Photo> component) and client/public/images/CREDITS.md.
 // Existing outputs are skipped, so delete a file to regenerate it.
+// Optional per photo: focus (object-position), trimTop (fraction cut from the
+// top), crop ([left, top, width, height] fractions), credit (stock photos).
 import fs from 'node:fs';
 import path from 'node:path';
 import sharp from 'sharp';
@@ -30,6 +32,13 @@ for (const [name, spec] of Object.entries(images)) {
   let pipeline = sharp(src).rotate();
   const meta = await sharp(await pipeline.clone().toBuffer()).metadata();
   let { width, height } = meta;
+  if (spec.crop) {
+    // crop: [left, top, width, height] as fractions of the original
+    const [cx, cy, cw, ch] = spec.crop;
+    const box = { left: Math.round(width * cx), top: Math.round(height * cy), width: Math.round(width * cw), height: Math.round(height * ch) };
+    pipeline = sharp(await pipeline.toBuffer()).extract(box);
+    ({ width, height } = box);
+  }
   if (spec.trimTop) {
     const top = Math.round(height * spec.trimTop);
     pipeline = sharp(await pipeline.toBuffer()).extract({ left: 0, top, width, height: height - top });

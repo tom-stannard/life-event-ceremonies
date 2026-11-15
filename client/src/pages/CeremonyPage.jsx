@@ -101,7 +101,7 @@ export default function CeremonyPage({ ceremony: c }) {
       {words.length > 0 && (
         <section className="section" aria-labelledby="words-heading">
           <h2 id="words-heading">Kind words</h2>
-          <Testimonials items={words} columns />
+          <Testimonials items={words} />
           <p className="section-more">
             <Link to="/testimonials">Read more kind words</Link>
           </p>

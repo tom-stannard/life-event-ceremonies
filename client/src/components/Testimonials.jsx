@@ -1,8 +1,10 @@
-export default function Testimonials({ items, columns = false }) {
+// Testimonials on tiles. With `highlightFirst`, the first one becomes a
+// full-width feature tile above the others.
+export default function Testimonials({ items, highlightFirst = false }) {
   return (
-    <ul className={`testimonials${columns ? ' testimonials-columns' : ''}`}>
-      {items.map((t) => (
-        <li key={t.name}>
+    <ul className="testimonials">
+      {items.map((t, i) => (
+        <li key={t.name} className={highlightFirst && i === 0 ? 'is-highlight' : undefined}>
           <figure>
             <blockquote>
               <p>{t.quote}</p>

@@ -22,7 +22,7 @@ export default function TestimonialsPage() {
         </p>
       </section>
       <section className="section">
-        <Testimonials items={testimonials} columns />
+        <Testimonials items={testimonials} highlightFirst />
       </section>
       <ContactSection />
     </>

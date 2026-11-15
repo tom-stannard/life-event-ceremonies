@@ -11,8 +11,6 @@ import { featuredTestimonials, testimonials } from '../content/testimonials.js';
 import { site } from '../siteConfig.js';
 
 export default function Home() {
-  const [lead, ...others] = featuredTestimonials;
-
   return (
     <>
       <PageHero heading={home.heading} lead={home.lead} image="michelle-reading">
@@ -87,13 +85,7 @@ export default function Home() {
 
       <section className="section" aria-labelledby="words-heading">
         <h2 id="words-heading">Kind words</h2>
-        <figure className="featured-quote">
-          <blockquote>
-            <p>{lead.quote}</p>
-          </blockquote>
-          <figcaption>{lead.name}</figcaption>
-        </figure>
-        <Testimonials items={others} />
+        <Testimonials items={featuredTestimonials} highlightFirst />
         <p className="section-more">
           <Link to="/testimonials">Read more from couples and families</Link>
         </p>

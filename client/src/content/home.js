@@ -11,7 +11,7 @@ export const home = {
     paragraphs: [
       'I’m a friendly, calm and confident person who loves meeting new people and, of course, creating and performing ceremonies.',
       'Whether we’re celebrating a wedding in the rain, welcoming a new baby or saying a gentle goodbye, my job is to make you feel at ease and to make sure the words truly reflect you. I have plenty of resources to help make your occasion unique and personal, and I’m always up for a laugh when the moment is right.',
-      'Choosing a celebrant comes down to feeling comfortable with them, so let’s have a chat. I really hope I can be that person for you.',
+      'Choosing a celebrant comes down to feeling comfortable with them, so let’s have a chat.',
     ],
   },
   // Trust line under the hero buttons. All of Michelle's Google reviews are 5 stars (docs/testimonials.md).

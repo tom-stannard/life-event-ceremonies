@@ -159,6 +159,16 @@
     "funeral-lantern": {
       "src": "Funerals/305353221_1217064735865400_8923103824561903305_n.jpg",
       "alt": "A lantern on a white-clothed table, set out for a memorial in a garden"
+    },
+    "michelle-face": {
+      "src": "Profiles/Landing Page Hero.jpg",
+      "alt": "Michelle Anne, celebrant",
+      "crop": [
+        0.3,
+        0.04,
+        0.46,
+        0.46
+      ]
     }
   }
 }

@@ -1,5 +1,6 @@
 import EnquiryForm from './EnquiryForm.jsx';
 import Photo from './Photo.jsx';
+import SocialLinks from './SocialLinks.jsx';
 import { site, phoneHref } from '../siteConfig.js';
 
 export default function ContactSection({ defaultType, gentle = false }) {
@@ -9,7 +10,7 @@ export default function ContactSection({ defaultType, gentle = false }) {
         <div className="contact-intro">
           <div className="contact-person">
             <span className="contact-person-photo">
-              <Photo name="michelle-headshot" box={1} sizes="4.5rem" />
+              <Photo name="michelle-face" box={1} sizes="4.5rem" />
             </span>
             <p>You’ll be talking to me, Michelle.</p>
           </div>
@@ -31,6 +32,10 @@ export default function ContactSection({ defaultType, gentle = false }) {
             <li>
               <span>Based in</span>
               {site.location}
+            </li>
+            <li>
+              <span>Follow along</span>
+              <SocialLinks />
             </li>
           </ul>
         </div>
