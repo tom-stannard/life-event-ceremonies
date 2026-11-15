@@ -26,25 +26,29 @@ export default function Home() {
       <section id="ceremonies" className="section" aria-labelledby="ceremonies-heading">
         <h2 id="ceremonies-heading">Ceremonies for every chapter</h2>
         <ul className="ceremony-tiles">
-          {ceremonies.map((c) => (
-            <li key={c.slug}>
-              <Link to={c.path} className="ceremony-tile">
-                <div className="circle">
-                  <Photo name={c.image} sizes="(min-width: 860px) 18vw, 30vw" />
-                </div>
-                <div>
-                  <h3>{c.name}</h3>
-                  <p>{c.card}</p>
-                </div>
-              </Link>
-            </li>
-          ))}
+          {ceremonies
+            .filter((c) => c.slug !== 'other-ceremonies')
+            .map((c) => (
+              <li key={c.slug}>
+                <Link to={c.path} className="ceremony-tile">
+                  <div className="circle">
+                    <span className="circle-clip">
+                      <Photo name={c.image} sizes="(min-width: 860px) 14rem, 30vw" />
+                    </span>
+                  </div>
+                  <div>
+                    <h3>{c.name}</h3>
+                    <p>{c.card}</p>
+                  </div>
+                </Link>
+              </li>
+            ))}
         </ul>
       </section>
 
       <section className="section about" aria-labelledby="about-heading">
         <div className="about-photo">
-          <div className="rounded">
+          <div className="arch">
             <Photo name="michelle-about" sizes="(min-width: 860px) 30vw, 70vw" />
           </div>
         </div>
@@ -59,7 +63,7 @@ export default function Home() {
 
       <section className="section" aria-labelledby="steps-heading">
         <h2 id="steps-heading">How it works</h2>
-        <ol className="steps">
+        <ol className="steps timeline">
           {home.steps.map((s) => (
             <li key={s.heading}>
               <h3>{s.heading}</h3>

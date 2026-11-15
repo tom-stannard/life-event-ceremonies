@@ -5,13 +5,9 @@ import { useEffect, useState } from 'react';
 // [data-heading-font] rules in styles.css) once a font is chosen.
 export const headingFonts = [
   { id: 'fraunces', label: 'Fraunces (current)' },
-  { id: 'lora', label: 'Lora', load: () => Promise.all([import('@fontsource-variable/lora'), import('@fontsource-variable/lora/wght-italic.css')]) },
-  {
-    id: 'cormorant',
-    label: 'Cormorant Garamond',
-    load: () => Promise.all([import('@fontsource-variable/cormorant-garamond'), import('@fontsource-variable/cormorant-garamond/wght-italic.css')]),
-  },
-  { id: 'quicksand', label: 'Quicksand', load: () => import('@fontsource-variable/quicksand') },
+  { id: 'young-serif', label: 'Young Serif', load: () => import('@fontsource/young-serif') },
+  { id: 'gilda', label: 'Gilda Display', load: () => import('@fontsource/gilda-display') },
+  { id: 'dancing-script', label: 'Dancing Script (handwritten)', load: () => import('@fontsource-variable/dancing-script') },
 ];
 
 const KEY = 'lec-heading-font';

@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
+import FallingLeaves from './components/FallingLeaves.jsx';
 import Home from './pages/Home.jsx';
 import CeremonyPage from './pages/CeremonyPage.jsx';
 import LocationPage from './pages/LocationPage.jsx';
@@ -32,6 +33,7 @@ export default function App() {
       <a className="skip-link" href="#main">
         Skip to content
       </a>
+      <FallingLeaves />
       <Header />
       <main id="main">
         <Routes>
