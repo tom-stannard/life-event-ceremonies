@@ -81,7 +81,7 @@ Peta Furness also left a review (~2024) with a rating but no text, so it isn't u
 
 - Show the display name, not the Google username.
 - Light tidying of spelling and punctuation is fine (e.g. "comemorate", "reccomending", "thier"); keep the wording and meaning. Long reviews can be trimmed to their strongest lines, marking cuts with "…".
-- **Strongest for the home page:** Jess, Sam & Emma, Mel & Luke, Annette, Aimee, Ben.
+- **Order and home page (owner's direction, 2026-11-16):** Jess's is the highlighted full-width tile; every list then runs newest year first, undated last (the sort lives in `client/src/content/testimonials.js`). The home page and area pages show the most recent: Jess plus the 2026 and 2025 reviews.
 - **By page:** most reviews are weddings; John's suits an elopement or intimate wedding mention. The naming and funeral pages rely on the legacy testimonials (Jennifer; Sue, Carol, Maria & Lynn).
 - Link to the Google reviews page ("Read more reviews on Google") once we have the profile URL.
 - **Themes that come up again and again**, useful when writing the copy:

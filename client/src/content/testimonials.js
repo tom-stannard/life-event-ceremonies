@@ -1,16 +1,16 @@
 // Client testimonials. Source text and display rules: docs/testimonials.md.
 // Long reviews are trimmed to their strongest lines ("…" marks a cut);
-// spelling lightly tidied. `featured` ones appear on the home page.
+// spelling lightly tidied. `highlight` marks the full-width feature tile.
 // `year` is a best guess from Google's relative dates when the reviews were
 // copied on 2026-11-15 ("a year ago" = 2025, "2 years ago" = 2024, "3 years
 // ago" = 2023), approved by the owner. The old-site testimonials have no year.
 
-export const testimonials = [
+const all = [
   {
     name: 'Jess',
+    highlight: true,
     year: 2026,
     tag: 'wedding',
-    featured: true,
     quote:
       'Michelle was everything we could have hoped for in a celebrant and more. Her energy is infectious, her warmth is genuine, and she brought such a beautiful, calming presence to our wedding day. … She made us feel completely at ease and created a ceremony that felt authentically us.',
   },
@@ -18,14 +18,12 @@ export const testimonials = [
     name: 'Sam & Emma',
     year: 2024,
     tag: 'wedding',
-    featured: true,
     quote:
       'Our ceremony was on New Year’s Day and we were finding it hard to find someone, but luckily we found Michelle. Michelle has a unique ability to capture the essence of a couple’s journey, creating a ceremony that felt deeply personal, humorous and heartfelt.',
   },
   {
     name: 'Sue',
     tag: 'funeral',
-    featured: true,
     quote:
       'Thank you Michelle for ensuring the funeral service was such a perfect reflection of Mum’s life. You created such a sense of “us” as a family, and set the tone exactly as we wanted.',
   },
@@ -33,14 +31,12 @@ export const testimonials = [
     name: 'Mel & Luke',
     year: 2026,
     tag: 'wedding',
-    featured: true,
     quote:
       'On the day of the ceremony, a storm rolled in which threw a bit of a spanner in the plans, but Michelle remained completely calm and accommodating. Her relaxed approach helped keep us at ease and made the whole experience feel seamless despite the change.',
   },
   {
     name: 'Jennifer',
     tag: 'naming',
-    featured: true,
     quote:
       'I just wanted to say a massive thank you for everything you did yesterday. The naming ceremony was everything and more. Thank you for all the time and effort you put in for making a lovely service for my daughter.',
   },
@@ -48,7 +44,6 @@ export const testimonials = [
     name: 'Aimee',
     year: 2024,
     tag: 'wedding',
-    featured: true,
     quote:
       'Even with last-minute changes, and running late (true to my style, lol), we never felt like we were inconveniencing or troubling her. … Even through my nervous laughter (the whole time) and our awkwardness, she managed to provide exactly the ceremony we envisioned.',
   },
@@ -159,6 +154,15 @@ export const testimonials = [
   },
 ];
 
-export const featuredTestimonials = testimonials.filter((t) => t.featured);
+// Order used everywhere: the highlighted testimonial first, then newest year
+// first, with undated ones last (keeping their order above within a year).
+export const testimonials = [...all].sort((a, b) => {
+  if (a.highlight !== b.highlight) return a.highlight ? -1 : 1;
+  return (b.year ?? 0) - (a.year ?? 0);
+});
+
+// Home page and area pages: the most recent (2025 and 2026).
+export const featuredTestimonials = testimonials.filter((t) => t.highlight || t.year >= 2025);
+
 export const testimonialsByTags = (tags, limit = 3) =>
   testimonials.filter((t) => tags.includes(t.tag)).slice(0, limit);

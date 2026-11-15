@@ -848,16 +848,14 @@ main {
 /* ---------------------------------------------------------------- testimonials */
 
 /* Quotes sit on white tiles in the body font for easy reading. */
+/* A grid that fills row by row, so tiles read in date order. */
 .testimonials {
   list-style: none;
   margin: 1.5rem 0 0;
   padding: 0;
-  column-gap: 1.25rem;
-}
-
-.testimonials li {
-  break-inside: avoid;
-  margin-bottom: 1.25rem;
+  display: grid;
+  gap: 1.25rem;
+  align-items: start;
 }
 
 .testimonials figure {
@@ -898,13 +896,13 @@ main {
 
 @media (min-width: 720px) {
   .testimonials {
-    columns: 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (min-width: 1100px) {
   .testimonials {
-    columns: 3;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -1587,8 +1585,8 @@ main {
 }
 
 .testimonials li.is-highlight {
-  column-span: all;
-  margin-bottom: 1.5rem;
+  grid-column: 1 / -1;
+  margin-bottom: 0.25rem;
 }
 
 .testimonials li.is-highlight figure {
