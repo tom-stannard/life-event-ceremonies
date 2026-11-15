@@ -6,9 +6,10 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "node --watch src/index.js",
-    "start": "NODE_ENV=production node src/index.js"
+    "start": "cross-env NODE_ENV=production node src/index.js"
   },
   "dependencies": {
+    "cross-env": "^10.1.0",
     "express": "^5.1.0"
   }
 }
