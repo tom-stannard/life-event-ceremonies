@@ -6,8 +6,8 @@ context, record it here (or update the line it changes) in the same session.
 
 ## Business
 
-- **Michelle Anne – Life Event Ceremonies**: a celebrant based in Spring Farm, NSW (Australia). Her full name is Michelle Stannard, and the surname can appear on the site (e.g. in testimonials).
-- Use Spring Farm as the location on the site. Ignore other addresses that appear in third-party listings, such as Menangle Rd, Camden (owner's direction, 2026-11-15).
+- **Michelle Anne – Life Event Ceremonies**: a celebrant who lives in Spring Farm, NSW (Australia). Her full name is Michelle Stannard, and the surname can appear on the site (e.g. in testimonials).
+- **Use Camden, NSW as the public location** ("Based in Camden", structured data, copy). Owner's direction, 2026-11-16; this replaces the earlier Spring Farm decision. Ignore other addresses in third-party listings, such as Menangle Rd, Camden.
 - Domain: <https://lifeeventceremonies.com.au/>. The server redirects `www.` to the bare domain (added 2026-11-15).
 - Tone of the old site: warm, personal, first-person ("I"), sign-off line _"Your ceremony – your way."_
 - Use Australian English spelling (e.g. "organise", "colour").
@@ -16,7 +16,7 @@ context, record it here (or update the line it changes) in the same session.
 
 | | |
 |---|---|
-| Location | Spring Farm, NSW |
+| Location | Camden, NSW |
 | Email | hello@lifeeventceremonies.com.au |
 | Phone | 0412 235 472 |
 | Facebook | https://www.facebook.com/people/Michelle-Anne-Celebrant-Life-Event-Ceremonies/100085498419318/ |
@@ -39,9 +39,12 @@ The owner likes two reference sites (content only, not design): cindycheriechild
    - Baby Naming Ceremonies
    - Funerals
    - Other Ceremonies (new). Base the content on cindycheriechilds.au's page for now: commitment ceremonies, home blessings, blended family rituals, personal milestones, symbolic rituals. Write it in our own words.
-3. **Location pages** for local SEO, one per service area: Camden, Campbelltown, Wollondilly, South West Sydney. Each needs copy specific to its area, and they should be linked from the footer and the ceremony pages.
+3. **Area pages** for local SEO (restructured 2026-11-16). Two regions, each with its own page and a page for each suburb under it, shown as a nested list under Areas in the menu:
+   - **Camden**: Spring Farm, Narellan, Mount Annan, Elderslie, Harrington Park, Oran Park, Gregory Hills, Currans Hill, Cobbitty, Catherine Field, Kirkham.
+   - **Wollondilly**: Picton, Thirlmere, The Oaks, Oakdale, Menangle, Wilton, Appin (the owner's selection).
+   - Campbelltown and South West Sydney were removed; their old URLs redirect to `/locations/camden`. URLs are flat (`/locations/<suburb>`), and every page needs copy specific to its place (`client/src/content/locations.js`).
 4. **FAQs**, covering all ceremony types.
-5. **Testimonials**: 22 so far (6 from the old site, 16 from Google). See [`testimonials.md`](testimonials.md).
+5. **Testimonials**: 22 so far (6 from the old site, 16 from Google). See [`testimonials.md`](testimonials.md). Everywhere on the site they're shown on white tiles in the body font for readability (owner's direction, 2026-11-16).
 
 **No pricing or packages are shown** for now (owner's decision, 2026-11-15).
 
@@ -83,7 +86,8 @@ The full site was built on branch `site-build`: all pages above, the new logo, t
 ## Assets
 
 - `local assets/` (gitignored) holds the owner's original photos: full-size phone images up to ~6 MB.
-- Originals are in `local assets/Photos/` (stock picks in `Photos/Stock/`). There's also `local assets/Documents/notice-of-intended-marriage.DOCX`.
+- Originals are in `local assets/Photos/`, sorted by the owner into `Weddings & Vow Renewals/`, `Baby Naming/`, `Funerals/`, `Profiles/` and `Stock/` (2026-11-16). Files the owner has named for a spot (e.g. `Profiles/Landing Page Hero.jpg`, `Profiles/Hi, I'm Michelle.jpg`, `Weddings & Vow Renewals/Wedding Hero.png`, `Vow Renewals.jpg`) are their picks for that spot.
+- Photo direction (2026-11-16): the naming page uses only Michelle's own photos from `Baby Naming/` (no stock), and never shows a child's full name (e.g. on a certificate); blur it or leave the photo out. Reusing photos across pages is fine. There's also `local assets/Documents/notice-of-intended-marriage.DOCX`.
 - To add or swap a photo: list it in `scripts/images.json` (source file, alt text, optional `focus` and `credit`), then run `npm run images`. Web versions go to `client/public/images/` (committed) and their sizes to `client/src/content/images.generated.json`. Use it in a page with `<Photo name="…" />`.
 - Choosing images (owner's direction, 2026-11-15): use the real photos in `local assets/` where they fit. Where they leave gaps, use stock photos chosen by the agent. A stock photo must be licensed for free commercial use (e.g. Unsplash, Pexels). Record its source URL and licence next to the file, e.g. in `client/public/images/CREDITS.md`.
 

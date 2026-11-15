@@ -27,7 +27,7 @@ const business = {
   email: site.email,
   image: `${site.url}/images/michelle-headshot-960.webp`,
   logo: `${site.url}/brand/logo-stacked.png`,
-  address: { '@type': 'PostalAddress', addressLocality: 'Spring Farm', addressRegion: 'NSW', postalCode: '2570', addressCountry: 'AU' },
+  address: { '@type': 'PostalAddress', addressLocality: 'Camden', addressRegion: 'NSW', postalCode: '2570', addressCountry: 'AU' },
   areaServed: locations.map((l) => ({ '@type': 'Place', name: `${l.name}, NSW` })),
   sameAs: [site.facebook, site.instagram].filter(Boolean),
 };

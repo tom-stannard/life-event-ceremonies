@@ -2,128 +2,95 @@
   "_comment": "Photos used on the site. 'src' is relative to 'local assets/Photos/' (gitignored originals). Run `npm run images` after editing; outputs go to client/public/images and client/src/content/images.generated.json. Stock photos need a 'credit' entry.",
   "images": {
     "michelle-reading": {
-      "src": "728226174_976768858516386_5670018957185565328_n.jpg",
+      "src": "Profiles/Landing Page Hero.jpg",
       "alt": "Michelle laughing as she reads from her ceremony folder in a garden",
       "focus": "62% 40%"
     },
-    "michelle-selfie": {
-      "src": "897720256_1096824759844128_5853659798098963458_n.jpg",
-      "alt": "Michelle smiling in front of a floral arch",
-      "focus": "40% 50%"
-    },
     "michelle-headshot": {
-      "src": "headshot 1.jpg",
+      "src": "Profiles/headshot 1.jpg",
       "alt": "Portrait of Michelle Anne, celebrant",
       "focus": "50% 30%"
     },
     "wedding-forest-kiss": {
-      "src": "Jess&Pat-190.jpg",
+      "src": "Weddings & Vow Renewals/Jess&Pat-190.jpg",
       "alt": "Michelle applauds as a couple kiss beneath towering trees, with a string quartet behind them",
       "focus": "50% 45%"
     },
     "wedding-forest-wide": {
-      "src": "Jess&Pat-190_edited.jpg",
+      "src": "Weddings & Vow Renewals/Jess&Pat-190_edited.jpg",
       "alt": "A couple kiss in a forest clearing as Michelle and a groomsman applaud"
     },
-    "wedding-trio": {
-      "src": "Jess&Pat-064_edited.jpg",
-      "alt": "Michelle standing with two grooms on a leafy garden path"
-    },
     "wedding-walk": {
-      "src": "Jess&Pat-329.jpg",
+      "src": "Weddings & Vow Renewals/Jess&Pat-329.jpg",
       "alt": "A newly married couple walking hand in hand through a eucalyptus forest"
     },
     "wedding-rings": {
-      "src": "Jess&Pat-127.jpg",
+      "src": "Weddings & Vow Renewals/Jess&Pat-127.jpg",
       "alt": "Two wedding rings held out in their boxes"
     },
     "wedding-hands": {
-      "src": "Jess&Pat-157.jpg",
+      "src": "Weddings & Vow Renewals/Jess&Pat-157.jpg",
       "alt": "Black and white photo of a couple holding hands during their vows"
     },
     "wedding-signing": {
-      "src": "Jess&Pat-182.jpg",
+      "src": "Weddings & Vow Renewals/Jess&Pat-182.jpg",
       "alt": "Signing the marriage certificate on a timber table"
     },
     "wedding-bouquet": {
-      "src": "Jess&Pat-261.jpg",
+      "src": "Weddings & Vow Renewals/Jess&Pat-261.jpg",
       "alt": "A bride's bouquet of roses and gum leaves"
     },
     "wedding-quartet": {
-      "src": "Jess&Pat-121.jpg",
+      "src": "Weddings & Vow Renewals/Jess&Pat-121.jpg",
       "alt": "A string quartet playing under market umbrellas in a garden"
     },
-    "wedding-garden-vows": {
-      "src": "7R508098.jpg",
-      "alt": "Michelle leading a couple's vows in front of a floral arbour"
-    },
     "wedding-bush-garden": {
-      "src": "received_2419712704898775.jpeg",
+      "src": "Weddings & Vow Renewals/received_2419712704898775.jpeg",
       "alt": "A couple holding hands in a bush garden ceremony as Michelle officiates"
     },
     "wedding-barn": {
-      "src": "received_899871618501308.jpeg",
+      "src": "Weddings & Vow Renewals/received_899871618501308.jpeg",
       "alt": "A couple exchanging vows under a rose-covered timber arch beside a brick barn"
     },
     "wedding-barn-wide": {
-      "src": "received_402979242719120.jpeg",
+      "src": "Weddings & Vow Renewals/received_402979242719120.jpeg",
       "alt": "Michelle reading to a couple beneath a floral arch outside a heritage brick barn"
     },
     "wedding-lawn-signing": {
-      "src": "Screenshot 2026-11-15 185938.png",
+      "src": "Weddings & Vow Renewals/Screenshot 2026-11-15 185938.png",
       "alt": "Michelle guiding a couple as they sign their marriage certificate on the lawn"
     },
     "wedding-certificate": {
-      "src": "Screenshot 2026-11-15 185908.png",
+      "src": "Weddings & Vow Renewals/Screenshot 2026-11-15 185908.png",
       "alt": "Michelle with a newly married couple holding their certificate"
     },
     "wedding-laughter": {
-      "src": "Screenshot 2026-11-15 185815.png",
+      "src": "Weddings & Vow Renewals/Screenshot 2026-11-15 185815.png",
       "alt": "A bride throws her head back laughing during the ceremony"
     },
     "wedding-window": {
-      "src": "MA-243.jpg",
+      "src": "Weddings & Vow Renewals/MA-243.jpg",
       "alt": "A couple signing their marriage paperwork by a bright window with Michelle"
     },
     "wedding-lookout": {
-      "src": "IMG_20261108_132840.jpg",
+      "src": "Weddings & Vow Renewals/IMG_20261108_132840.jpg",
       "alt": "Two brides exchanging vows at a lookout with Michelle between them"
     },
     "wedding-arch-lawn": {
-      "src": "548333863_756295333897074_4044209612336497005_n.jpg",
+      "src": "Weddings & Vow Renewals/548333863_756295333897074_4044209612336497005_n.jpg",
       "alt": "A couple and Michelle beneath a white floral arch on a green lawn"
     },
     "wedding-autumn": {
-      "src": "PXL_20260626_021323110.MP.jpg",
+      "src": "Weddings & Vow Renewals/PXL_20260626_021323110.MP.jpg",
       "alt": "Michelle with a couple holding their marriage certificate among autumn trees"
     },
     "naming-balloons": {
-      "src": "PXL_20241208_012759050~2.jpg",
+      "src": "Baby Naming/PXL_20241208_012759050~2.jpg",
       "alt": "Michelle speaking at a naming ceremony as parents hold their daughter under pastel balloons"
     },
-    "naming-certificate": {
-      "src": "received_496628759114755.jpeg",
-      "alt": "Michelle with a mother and baby holding the naming certificate"
-    },
     "naming-family": {
-      "src": "PXL_20241208_014305637~2.jpg",
+      "src": "Baby Naming/PXL_20241208_014305637~2.jpg",
       "alt": "A family celebrating their daughter's naming day with Michelle"
-    },
-    "naming-cradle": {
-      "src": "Stock/pexels-hussein-altameemi-5969905.jpg",
-      "alt": "A parent cradling a newborn baby wrapped in white",
-      "credit": {
-        "photographer": "Hussein Altameemi",
-        "url": "https://www.pexels.com/photo/5969905/"
-      }
-    },
-    "naming-newborn": {
-      "src": "Stock/pexels-baby-concept-3169971.jpg",
-      "alt": "A sleeping newborn wrapped in teal with a flower crown",
-      "credit": {
-        "photographer": "Baby Concept",
-        "url": "https://www.pexels.com/photo/3169971/"
-      }
     },
     "funeral-memorial": {
       "src": "Stock/pexels-cottonbro-10496221.jpg",
@@ -150,12 +117,44 @@
       }
     },
     "vow-renewal": {
-      "src": "PXL_20241116_003228118.PORTRAIT.jpg",
-      "alt": "A couple dressed for a celebration beneath flowering jacaranda trees"
+      "src": "Weddings & Vow Renewals/Vow Renewals.jpg",
+      "alt": "Michelle leading a couple’s vows in front of a floral arbour",
+      "focus": "45% 50%"
     },
-    "family-celebration": {
-      "src": "thumbnail_IMG_8329.jpg",
-      "alt": "Michelle with a smiling family holding their certificate, a baby on mum’s hip"
+    "michelle-about": {
+      "src": "Profiles/Hi, I'm Michelle.jpg",
+      "alt": "Michelle standing in a garden holding her ceremony folder",
+      "focus": "58% 45%"
+    },
+    "wedding-hero": {
+      "src": "Weddings & Vow Renewals/Wedding Hero.png",
+      "alt": "Michelle smiling as she leads a couple through their wedding ceremony",
+      "focus": "47% 40%"
+    },
+    "naming-group": {
+      "src": "Baby Naming/881257050_1090243723835565_2599399899696220845_n.jpg",
+      "alt": "A family and their guests holding certificates at an outdoor naming ceremony",
+      "trimTop": 0.2
+    },
+    "naming-grandma": {
+      "src": "Baby Naming/318022498_515612423842968_7669903848026358001_n.jpg",
+      "alt": "Michelle and a mother admire a baby in her christening gown"
+    },
+    "other-handfasting": {
+      "src": "Stock/pexels-esma-nur-buyukguclu-35434715.jpg",
+      "alt": "A couple’s hands bound together with a string of pearls",
+      "credit": {
+        "photographer": "Esma Nur Buyukguclu",
+        "url": "https://www.pexels.com/photo/35434715/"
+      }
+    },
+    "other-family": {
+      "src": "Stock/pexels-caleb-oquendo-3030090.jpg",
+      "alt": "A family walking hand in hand along a road at sunset",
+      "credit": {
+        "photographer": "Caleb Oquendo",
+        "url": "https://www.pexels.com/photo/3030090/"
+      }
     }
   }
 }

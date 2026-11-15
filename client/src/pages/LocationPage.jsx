@@ -3,14 +3,19 @@ import PageHero from '../components/PageHero.jsx';
 import Testimonials from '../components/Testimonials.jsx';
 import ContactSection from '../components/ContactSection.jsx';
 import { ceremonies } from '../content/ceremonies.js';
-import { locations } from '../content/locations.js';
+import { regions, regionBySlug, suburbsOf } from '../content/locations.js';
 import { featuredTestimonials } from '../content/testimonials.js';
 
-export default function LocationPage({ location: l }) {
-  const others = locations.filter((o) => o.slug !== l.slug);
+// Renders both region pages (Camden, Wollondilly) and suburb pages.
+export default function LocationPage({ area }) {
+  const region = area.region ? regionBySlug[area.region] : area;
+  const isSuburb = Boolean(area.region);
+  const siblings = suburbsOf(region).filter((s) => s.slug !== area.slug);
+  const otherRegions = regions.filter((r) => r.slug !== region.slug);
+
   return (
     <>
-      <PageHero heading={l.heading} lead={l.lead} image={l.image}>
+      <PageHero heading={area.heading} lead={area.lead} image={area.image}>
         <div className="hero-actions">
           <a href="#contact" className="button">
             Check my availability
@@ -20,12 +25,17 @@ export default function LocationPage({ location: l }) {
 
       <section className="section split">
         <div className="prose">
-          {l.paragraphs.map((p) => (
+          {area.paragraphs.map((p) => (
             <p key={p.slice(0, 24)}>{p}</p>
           ))}
+          {isSuburb && (
+            <p>
+              <Link to={region.path}>More about ceremonies across the {region.name} area</Link>
+            </p>
+          )}
         </div>
         <div className="offers">
-          <h2>Ceremonies in {l.name}</h2>
+          <h2>Ceremonies in {area.name}</h2>
           <ul className="link-list">
             {ceremonies.map((c) => (
               <li key={c.slug}>
@@ -38,31 +48,38 @@ export default function LocationPage({ location: l }) {
       </section>
 
       <section className="section" aria-labelledby="suburbs-heading">
-        <h2 id="suburbs-heading">Suburbs I cover around {l.name}</h2>
-        <ul className="suburbs">
-          {l.suburbs.map((s) => (
-            <li key={s}>{s}</li>
+        <h2 id="suburbs-heading">{isSuburb ? `Nearby in the ${region.name} area` : `Suburbs I cover around ${region.name}`}</h2>
+        <ul className="area-links">
+          {isSuburb && (
+            <li>
+              <Link to={region.path}>{region.name}</Link>
+            </li>
+          )}
+          {siblings.map((s) => (
+            <li key={s.slug}>
+              <Link to={s.path}>{s.name}</Link>
+            </li>
           ))}
         </ul>
         <p className="muted">
-          Don’t see your suburb? I travel across Macarthur and South West Sydney, so just ask.
+          Don’t see your suburb? I travel right across the Camden area and Wollondilly, so just ask.
         </p>
       </section>
 
       <section className="section" aria-labelledby="words-heading">
         <h2 id="words-heading">Kind words</h2>
-        <Testimonials items={featuredTestimonials.slice(0, 3)} columns />
+        <Testimonials items={featuredTestimonials.slice(0, 3)} />
         <p className="section-more">
           <Link to="/testimonials">Read more kind words</Link>
         </p>
       </section>
 
       <section className="section areas" aria-labelledby="nearby-heading">
-        <h2 id="nearby-heading">Nearby areas</h2>
+        <h2 id="nearby-heading">Also covering</h2>
         <ul className="area-links">
-          {others.map((o) => (
-            <li key={o.slug}>
-              <Link to={o.path}>{o.name}</Link>
+          {otherRegions.map((r) => (
+            <li key={r.slug}>
+              <Link to={r.path}>{r.name}</Link>
             </li>
           ))}
         </ul>

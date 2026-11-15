@@ -5,7 +5,7 @@ import Testimonials from '../components/Testimonials.jsx';
 import ContactSection from '../components/ContactSection.jsx';
 import { home } from '../content/home.js';
 import { ceremonies } from '../content/ceremonies.js';
-import { locations } from '../content/locations.js';
+import { regions, suburbsOf } from '../content/locations.js';
 import { featuredTestimonials } from '../content/testimonials.js';
 import { site } from '../siteConfig.js';
 
@@ -45,7 +45,7 @@ export default function Home() {
       <section className="section about" aria-labelledby="about-heading">
         <div className="about-photo">
           <div className="arch">
-            <Photo name="michelle-selfie" sizes="(min-width: 860px) 30vw, 70vw" />
+            <Photo name="michelle-about" sizes="(min-width: 860px) 30vw, 70vw" />
           </div>
         </div>
         <div className="about-text">
@@ -79,16 +79,23 @@ export default function Home() {
 
       <section className="section areas" aria-labelledby="areas-heading">
         <h2 id="areas-heading">Where I celebrate</h2>
-        <p>
-          I’m based in Spring Farm and look after couples and families right across Macarthur and South West Sydney.
-        </p>
-        <ul className="area-links">
-          {locations.map((l) => (
-            <li key={l.slug}>
-              <Link to={l.path}>{l.name}</Link>
-            </li>
+        <p>I’m based in Camden and look after couples and families right across the Camden area and Wollondilly.</p>
+        <div className="area-groups">
+          {regions.map((r) => (
+            <div key={r.slug}>
+              <h3>
+                <Link to={r.path}>{r.name}</Link>
+              </h3>
+              <ul className="area-links">
+                {suburbsOf(r).map((s) => (
+                  <li key={s.slug}>
+                    <Link to={s.path}>{s.name}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
-        </ul>
+        </div>
       </section>
 
       <ContactSection />

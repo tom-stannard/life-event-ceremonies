@@ -27,6 +27,13 @@ app.use((req, res, next) => {
   next();
 });
 
+// Retired pages → their closest replacement (keeps old links and search results working).
+const retired = {
+  '/locations/campbelltown': '/locations/camden',
+  '/locations/south-west-sydney': '/locations/camden',
+};
+app.use((req, res, next) => (retired[req.path] ? res.redirect(301, retired[req.path]) : next()));
+
 // --- API -------------------------------------------------------------
 app.use('/api', express.json({ limit: '20kb' }));
 

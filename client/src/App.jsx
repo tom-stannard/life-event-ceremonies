@@ -9,7 +9,7 @@ import FaqPage from './pages/FaqPage.jsx';
 import TestimonialsPage from './pages/TestimonialsPage.jsx';
 import NotFound from './pages/NotFound.jsx';
 import { ceremonies } from './content/ceremonies.js';
-import { locations } from './content/locations.js';
+import { allAreas } from './content/locations.js';
 import { routeFor } from './routes.js';
 
 // Keep <title> and description in step with client-side navigation, and
@@ -39,8 +39,8 @@ export default function App() {
           {ceremonies.map((c) => (
             <Route key={c.path} path={c.path} element={<CeremonyPage ceremony={c} />} />
           ))}
-          {locations.map((l) => (
-            <Route key={l.path} path={l.path} element={<LocationPage location={l} />} />
+          {allAreas.map((l) => (
+            <Route key={l.path} path={l.path} element={<LocationPage area={l} />} />
           ))}
           <Route path="/faqs" element={<FaqPage />} />
           <Route path="/testimonials" element={<TestimonialsPage />} />

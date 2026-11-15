@@ -2,7 +2,7 @@
 // Used by the router, the prerender step (one HTML file per route) and the sitemap.
 import { home } from './content/home.js';
 import { ceremonies } from './content/ceremonies.js';
-import { locations } from './content/locations.js';
+import { allAreas } from './content/locations.js';
 
 const brand = 'Life Event Ceremonies';
 const withBrand = (title) => (title.includes(brand) ? title : `${title} | ${brand}`);
@@ -10,7 +10,7 @@ const withBrand = (title) => (title.includes(brand) ? title : `${title} | ${bran
 export const routes = [
   { path: '/', page: 'home', title: home.title, description: home.description },
   ...ceremonies.map((c) => ({ path: c.path, page: 'ceremony', slug: c.slug, title: withBrand(c.title), description: c.description, image: c.image })),
-  ...locations.map((l) => ({ path: l.path, page: 'location', slug: l.slug, title: withBrand(l.title), description: l.description, image: l.image })),
+  ...allAreas.map((l) => ({ path: l.path, page: 'location', slug: l.slug, title: withBrand(l.title), description: l.description, image: l.image })),
   {
     path: '/faqs',
     page: 'faqs',

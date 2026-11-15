@@ -10,17 +10,6 @@
     ],
     "focus": "62% 40%"
   },
-  "michelle-selfie": {
-    "alt": "Michelle smiling in front of a floral arch",
-    "width": 1134,
-    "height": 1133,
-    "widths": [
-      480,
-      960,
-      1134
-    ],
-    "focus": "40% 50%"
-  },
   "michelle-headshot": {
     "alt": "Portrait of Michelle Anne, celebrant",
     "width": 3456,
@@ -47,16 +36,6 @@
     "alt": "A couple kiss in a forest clearing as Michelle and a groomsman applaud",
     "width": 2250,
     "height": 1342,
-    "widths": [
-      480,
-      960,
-      1600
-    ]
-  },
-  "wedding-trio": {
-    "alt": "Michelle standing with two grooms on a leafy garden path",
-    "width": 2250,
-    "height": 2668,
     "widths": [
       480,
       960,
@@ -117,16 +96,6 @@
     "alt": "A string quartet playing under market umbrellas in a garden",
     "width": 3637,
     "height": 4849,
-    "widths": [
-      480,
-      960,
-      1600
-    ]
-  },
-  "wedding-garden-vows": {
-    "alt": "Michelle leading a couple's vows in front of a floral arbour",
-    "width": 2160,
-    "height": 1440,
     "widths": [
       480,
       960,
@@ -241,16 +210,6 @@
       1600
     ]
   },
-  "naming-certificate": {
-    "alt": "Michelle with a mother and baby holding the naming certificate",
-    "width": 2048,
-    "height": 1366,
-    "widths": [
-      480,
-      960,
-      1600
-    ]
-  },
   "naming-family": {
     "alt": "A family celebrating their daughter's naming day with Michelle",
     "width": 624,
@@ -258,26 +217,6 @@
     "widths": [
       480,
       624
-    ]
-  },
-  "naming-cradle": {
-    "alt": "A parent cradling a newborn baby wrapped in white",
-    "width": 3376,
-    "height": 5739,
-    "widths": [
-      480,
-      960,
-      1600
-    ]
-  },
-  "naming-newborn": {
-    "alt": "A sleeping newborn wrapped in teal with a flower crown",
-    "width": 5381,
-    "height": 3587,
-    "widths": [
-      480,
-      960,
-      1600
     ]
   },
   "funeral-memorial": {
@@ -311,21 +250,74 @@
     ]
   },
   "vow-renewal": {
-    "alt": "A couple dressed for a celebration beneath flowering jacaranda trees",
-    "width": 514,
-    "height": 913,
+    "alt": "Michelle leading a couple’s vows in front of a floral arbour",
+    "width": 2160,
+    "height": 1440,
     "widths": [
       480,
-      514
+      960,
+      1600
+    ],
+    "focus": "45% 50%"
+  },
+  "michelle-about": {
+    "alt": "Michelle standing in a garden holding her ceremony folder",
+    "width": 4608,
+    "height": 3456,
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "focus": "58% 45%"
+  },
+  "wedding-hero": {
+    "alt": "Michelle smiling as she leads a couple through their wedding ceremony",
+    "width": 1940,
+    "height": 1092,
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "focus": "47% 40%"
+  },
+  "naming-group": {
+    "alt": "A family and their guests holding certificates at an outdoor naming ceremony",
+    "width": 1464,
+    "height": 1638,
+    "widths": [
+      480,
+      960,
+      1464
     ]
   },
-  "family-celebration": {
-    "alt": "Michelle with a smiling family holding their certificate, a baby on mum’s hip",
-    "width": 640,
-    "height": 480,
+  "naming-grandma": {
+    "alt": "Michelle and a mother admire a baby in her christening gown",
+    "width": 420,
+    "height": 280,
+    "widths": [
+      420
+    ]
+  },
+  "other-handfasting": {
+    "alt": "A couple’s hands bound together with a string of pearls",
+    "width": 1800,
+    "height": 2398,
     "widths": [
       480,
-      640
+      960,
+      1600
+    ]
+  },
+  "other-family": {
+    "alt": "A family walking hand in hand along a road at sunset",
+    "width": 1800,
+    "height": 2710,
+    "widths": [
+      480,
+      960,
+      1600
     ]
   }
 }

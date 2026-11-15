@@ -5,7 +5,7 @@ export const site = {
   fullName: 'Michelle Stannard',
   business: 'Life Event Ceremonies',
   url: 'https://lifeeventceremonies.com.au',
-  location: 'Spring Farm, NSW',
+  location: 'Camden, NSW',
   email: 'hello@lifeeventceremonies.com.au',
   phone: '0412 235 472',
   facebook: 'https://www.facebook.com/people/Michelle-Anne-Celebrant-Life-Event-Ceremonies/100085498419318/',

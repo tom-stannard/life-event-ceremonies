@@ -20,11 +20,26 @@ Copy written on 2026-11-15 that goes beyond what Michelle has told us directly. 
 - **Booking lead time** (FAQ): "a few months' notice is ideal". Any typical lead time she'd like to state?
 - **Response time**: the site only says "I'll be in touch soon". Add a promise (e.g. within 24 hours) if she's happy to.
 
-## Location pages
+## Area pages
 
-`client/src/content/locations.js`. The copy names suburbs and general features (heritage streets, the Nepean, farm venues, Thirlmere, Warragamba) but no specific venues. Michelle could make these pages much stronger by naming venues and parks where she has held ceremonies. That's the single best improvement for local search.
+`client/src/content/locations.js`. Each suburb page has short copy naming well-known local features. These details are believed accurate but unconfirmed; check them, and swap in places where Michelle has actually held ceremonies (the single best improvement for local search):
+
+- Mount Annan: the Australian Botanic Garden.
+- Harrington Park: the lake.
+- Oran Park: formerly a raceway, now a fast-growing community.
+- Cobbitty: the heritage-listed Heber Chapel.
+- Catherine Field: Gledswood Homestead & Winery as an example venue.
+- Picton: historic main street and sandstone railway viaduct.
+- Thirlmere: the NSW Rail Museum and Thirlmere Lakes National Park.
+- The Oaks and Oakdale: near the Burragorang Valley.
+- Menangle: historic village on the Nepean.
+- Wilton: Bingara Gorge.
+- Appin: one of the oldest villages in the area, near Dharawal National Park.
+- Spring Farm, Elderslie, Kirkham and Menangle pages say Michelle is close by or can easily visit.
 
 ## Suggested additions
+
+- **Higher-resolution photos**: the naming page photo of Michelle with a mother and baby (`Baby Naming/318022498_…jpg`) is only 420px wide and looks soft on large screens. A full-size original would help.
 
 - **Credentials**: is she a Commonwealth-registered marriage celebrant, and since when? How many ceremonies has she done? Both build trust. Professional memberships (e.g. an association) could go in the footer.
 - **Acknowledgement of Country** in the footer (Dharawal and Gundungurra Country covers much of Macarthur and Wollondilly). Only if Michelle would like one.

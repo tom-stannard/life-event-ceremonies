@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router';
 import { ceremonies } from '../content/ceremonies.js';
-import { locations } from '../content/locations.js';
+import { regions, suburbsOf } from '../content/locations.js';
 
 function Menu({ label, items }) {
   return (
@@ -11,6 +11,31 @@ function Menu({ label, items }) {
         {items.map((item) => (
           <li key={item.path}>
             <NavLink to={item.path}>{item.name}</NavLink>
+          </li>
+        ))}
+      </ul>
+    </li>
+  );
+}
+
+// Areas: each region links to its own page, with its suburbs nested beneath.
+function AreasMenu() {
+  return (
+    <li className="nav-group nav-group-wide">
+      <span className="nav-group-label">Areas</span>
+      <ul>
+        {regions.map((r) => (
+          <li key={r.slug} className="nav-region">
+            <NavLink to={r.path} className="nav-region-link">
+              {r.name}
+            </NavLink>
+            <ul className="nav-suburbs">
+              {suburbsOf(r).map((s) => (
+                <li key={s.slug}>
+                  <NavLink to={s.path}>{s.name}</NavLink>
+                </li>
+              ))}
+            </ul>
           </li>
         ))}
       </ul>
@@ -44,7 +69,7 @@ export default function Header() {
       <nav id="site-nav" className="site-nav" aria-label="Main">
         <ul className="nav-list">
           <Menu label="Ceremonies" items={ceremonies} />
-          <Menu label="Areas" items={locations} />
+          <AreasMenu />
           <li>
             <NavLink to="/faqs">FAQs</NavLink>
           </li>

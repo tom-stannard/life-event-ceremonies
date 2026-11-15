@@ -1,11 +1,11 @@
 // Home page copy. The About section lives here (no separate About page for now).
 
 export const home = {
-  title: 'Michelle Anne, Celebrant | Life Event Ceremonies | Camden & Macarthur',
+  title: 'Michelle Anne, Celebrant | Life Event Ceremonies | Camden & Wollondilly',
   description:
-    'Warm, personal ceremonies for weddings, vow renewals, naming days and funerals. Michelle Anne is a celebrant based in Spring Farm, serving Camden, Campbelltown, Wollondilly and South West Sydney.',
+    'Warm, personal ceremonies for weddings, vow renewals, naming days and funerals. Michelle Anne is a celebrant based in Camden, serving the Camden area and Wollondilly.',
   heading: 'Your ceremony, your way',
-  lead: 'I’m Michelle, a celebrant in Spring Farm creating warm, personal ceremonies for life’s biggest moments: weddings, vow renewals, naming days and farewells.',
+  lead: 'I’m Michelle, a celebrant in Camden creating warm, personal ceremonies for life’s biggest moments: weddings, vow renewals, naming days and farewells.',
   about: {
     heading: 'Hi, I’m Michelle',
     paragraphs: [

@@ -84,7 +84,7 @@ export const faqGroups = [
       },
       {
         q: 'Where do you travel to?',
-        a: ['I’m based in Spring Farm and look after couples and families across Camden, Campbelltown, Wollondilly and South West Sydney. Planning something further away? Get in touch and we can talk it through.'],
+        a: ['I’m based in Camden and look after couples and families right across the Camden area and Wollondilly. Planning something further away? Get in touch and we can talk it through.'],
       },
       {
         q: 'How much does a ceremony cost?',
