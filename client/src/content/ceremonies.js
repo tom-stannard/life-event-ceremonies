@@ -66,7 +66,7 @@ export const ceremonies = [
     heading: 'Vow renewal ceremonies',
     lead: 'How much fun would it be to give your wedding day a do-over? That’s exactly how it feels for a lot of couples who renew their vows.',
     intro: [
-      'Maybe you married in a religion you no longer practise, in front of friends you no longer see. Maybe you eloped and the family still hasn’t forgiven you. Or maybe, after all these years, you simply want to say something new to each other.',
+      'Maybe you married in a religion you no longer practise, in front of friends you no longer see. Maybe you eloped and want to celebrate with family and friends this time. Or maybe, after all these years, you simply want to say something new to each other.',
       'Vow renewals have no legal requirements, so we can make yours as fun, romantic or serious as you like. I can’t wait to hear your story.',
     ],
     offerHeading: 'What we can include',
