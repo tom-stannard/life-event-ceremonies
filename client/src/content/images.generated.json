@@ -336,5 +336,16 @@
     "widths": [
       471
     ]
+  },
+  "vow-renewal-official": {
+    "alt": "A couple renewing their vows, holding their certificate with family and friends around them",
+    "width": 2268,
+    "height": 3548,
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "focus": "50% 30%"
   }
 }

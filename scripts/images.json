@@ -169,6 +169,12 @@
         0.46,
         0.46
       ]
+    },
+    "vow-renewal-official": {
+      "src": "Weddings & Vow Renewals/vow renewal official.jpg",
+      "alt": "A couple renewing their vows, holding their certificate with family and friends around them",
+      "trimTop": 0.12,
+      "focus": "50% 30%"
     }
   }
 }

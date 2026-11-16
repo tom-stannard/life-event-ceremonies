@@ -61,7 +61,7 @@ export const ceremonies = [
     title: 'Vow Renewal Celebrant in Camden & Wollondilly',
     description:
       'Celebrate your marriage all over again with a fun, romantic or heartfelt vow renewal ceremony by Michelle Anne, a celebrant based in Camden, NSW.',
-    image: 'vow-renewal',
+    image: 'vow-renewal-official',
     card: 'Give your wedding day a do-over, your way this time.',
     heading: 'Vow renewal ceremonies',
     lead: 'How much fun would it be to give your wedding day a do-over? That’s exactly how it feels for a lot of couples who renew their vows.',
